@@ -1,0 +1,114 @@
+$base-color: #ffffff;
+$btn-color: #5956e9;
+$patch1-color: #45dbc9;
+$patch2-color: #e5e5e5;
+$patch3-color: #ffdc60;
+$font-color: #c4c4c4;
+$select-color: #f5f7fb;
+$heading-color: #727e8f;
+$tag-color: #26247c;
+$star-color: #f8b129;
+$close-color: #d0b95f;
+.footer {
+  background-color: $tag-color;
+  width: 100%;
+  color: $base-color;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .content {
+    width: 75%;
+    .Con1 {
+      border-bottom: 1px solid white;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-bottom: 1rem;
+      flex-wrap: wrap;
+      .col2 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-top: 1rem;
+        width: 30%;
+        .link {
+          text-decoration: none;
+          color: $base-color;
+          cursor: pointer;
+          font-size: 15px;
+          margin: 0.5rem 0;
+        }
+      }
+      .col1 {
+        width: 25%;
+        font-size: 18px;
+        height: 40vh;
+        margin-right: 7rem;
+        .lang {
+          select {
+            background-color: $tag-color;
+            border: none;
+            font-size: 15px;
+            color: $base-color;
+            option {
+              background-color: rgba($color: $heading-color, $alpha: 0.7);
+              border: none;
+            }
+          }
+          select:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+    .Con2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0.5rem 0;
+      flex-wrap: wrap;
+      .innerCon1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 50%;
+        font-size: 15px;
+        flex-wrap: wrap;
+        .link {
+          text-decoration: none;
+          color: $base-color;
+          cursor: pointer;
+          font-size: 15px;
+          margin: 0.5rem 0;
+        }
+      }
+      .innerCon2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .link {
+          text-decoration: none;
+          color: $base-color;
+          cursor: pointer;
+          margin: 0 1rem;
+          .icon {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    @media (max-width: 500px) {
+      width: 85%;
+      .Con1 {
+        flex-direction: column;
+        .col1 {
+          height: unset;
+          width: 85%;
+        }
+      }
+    }
+  }
+}

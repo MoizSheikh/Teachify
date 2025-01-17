@@ -1,0 +1,51 @@
+{
+  "name": "mern-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "client": "cd client && npm start",
+    "server": "node-env-run server --exec nodemon | pino-colada",
+    "dev": "run-p server ",
+    "seed": "node seeds/seed.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1048.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "logger": "0.0.1",
+    "moment": "^2.29.4",
+    "mongodb": "^4.1.0",
+    "mongoose": "^5.13.7",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "multer-s3": "^2.10.0",
+    "nodemailer": "^6.7.5",
+    "passport": "^0.6.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-google-oidc": "^0.1.0",
+    "path": "^0.12.7",
+    "paypal-rest-sdk": "^1.8.1",
+    "pusher": "^5.1.2",
+    "socket.io": "^4.5.3",
+    "stripe": "^8.178.0",
+    "twilio": "^3.82.0"
+  },
+  "devDependencies": {
+    "express-pino-logger": "^6.0.0",
+    "node-env-run": "^4.0.2",
+    "nodemon": "^2.0.12",
+    "npm-run-all": "^4.1.5",
+    "pino-colada": "^2.1.0"
+  }
+}

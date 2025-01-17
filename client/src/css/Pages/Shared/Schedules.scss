@@ -1,0 +1,596 @@
+$base-color: #ffffff;
+$btn-color: #5956e9;
+$patch1-color: #45dbc9;
+$patch2-color: #e5e5e5;
+$patch3-color: #ffdc60;
+$font-color: #c4c4c4;
+$select-color: #f5f7fb;
+$heading-color: #727e8f;
+$tag-color: #26247c;
+$star-color: #f8b129;
+$close-color: #d0b95f;
+
+.daysBoxes {
+  display: flex;
+  flex-direction: column;
+  .innerDay {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.schedules {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  .LeftCon {
+    width: 65%;
+    .heading {
+      font-size: 20px;
+      font-weight: bolder;
+      margin-top: 1rem;
+      margin-left: 1.5rem;
+    }
+    .DateContent {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      .D1 {
+        width: 35%;
+        margin-left: 1.5rem;
+        .css-qklzlb-MuiDayPicker-header {
+          display: none;
+        }
+        .css-1vcokmn-MuiCalendarOrClockPicker-root {
+          width: 100%;
+          display: unset;
+          height: 100%;
+        }
+        .css-6t5f1e-MuiDayPicker-monthContainer {
+          overflow: unset;
+        }
+        .css-sf5t6v-PrivatePickersSlideTransition-root-MuiDayPicker-slideTransition {
+          min-height: unset;
+          height: 110vh;
+          direction: rtl;
+        }
+        .css-sf5t6v-PrivatePickersSlideTransition-root-MuiDayPicker-slideTransition::-webkit-scrollbar-track {
+          background-color: #dbdbdb;
+          border-radius: 5px;
+        }
+
+        .css-sf5t6v-PrivatePickersSlideTransition-root-MuiDayPicker-slideTransition::-webkit-scrollbar {
+          width: 6px;
+          background-color: #dbdbdb;
+          border-radius: 5px;
+        }
+
+        .css-sf5t6v-PrivatePickersSlideTransition-root-MuiDayPicker-slideTransition::-webkit-scrollbar-thumb {
+          background-color: #000000;
+          border-radius: 5px;
+        }
+        .css-169iwlq-MuiCalendarPicker-root,
+        .css-epd502 {
+          width: 100%;
+          height: 100%;
+          max-height: unset;
+          overflow-x: unset;
+        }
+        .css-nk89i7-MuiPickersCalendarHeader-root {
+          background-color: rgba($color: $heading-color, $alpha: 0.1);
+          padding: 0.5rem;
+          border-radius: 1rem;
+          margin-bottom: 3rem;
+        }
+        .css-1tkx1wf-MuiSvgIcon-root-MuiPickersCalendarHeader-switchViewIcon {
+          display: none;
+        }
+        .css-raiqh1-MuiTypography-root-MuiDayPicker-weekDayLabel {
+          color: $heading-color;
+          font-size: 18px;
+        }
+        .css-ghi3gg-MuiDayPicker-weekContainer {
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        .css-bkrceb-MuiButtonBase-root-MuiPickersDay-root,
+        .MuiPickersDay-root:not(.Mui-selected) {
+          font-size: 35px;
+          font-weight: bolder;
+          color: black;
+          padding: 1rem;
+          height: unset;
+          border-radius: 0;
+          width: 100%;
+          align-items: flex-start;
+          justify-content: flex-start;
+          background-color: $base-color;
+          border: none;
+          direction: ltr;
+          padding-left: 3rem;
+        }
+        .css-2h3pab-MuiButtonBase-root-MuiPickersDay-root {
+          display: none;
+        }
+        .css-bkrceb-MuiButtonBase-root-MuiPickersDay-root.Mui-selected,
+        .MuiPickersDay-root.Mui-selected {
+          color: $btn-color;
+          background-color: rgba($color: $patch1-color, $alpha: 0.1);
+        }
+        .MuiPickersDay-root.Mui-selected {
+          font-size: 35px;
+          font-weight: bolder;
+          padding: 1rem;
+          height: unset;
+          border-radius: 0;
+          width: 100%;
+          align-items: flex-start;
+          justify-content: flex-start;
+          direction: ltr;
+          padding-left: 3rem;
+          border-top-right-radius: 3rem;
+          border-bottom-right-radius: 3rem;
+        }
+      }
+      .D2 {
+        width: 60%;
+        margin-left: 2rem;
+        .innerCon {
+          width: 100%;
+          .card1 {
+            display: flex;
+            align-items: flex-start;
+            .time {
+              color: $heading-color;
+              margin: 1rem;
+              width: 20%;
+            }
+            .margin {
+              width: 26%;
+              color: $base-color;
+            }
+            .realCon {
+              background-color: rgba($color: $patch1-color, $alpha: 0.2);
+              padding: 1rem 1.5rem;
+              border-radius: 10px;
+              margin-top: 1rem;
+              width: 55%;
+              cursor: pointer;
+            }
+            .dotCon {
+              display: flex;
+              align-items: flex-start;
+              justify-content: space-between;
+              margin-bottom: 2rem;
+              .scheduleLogo {
+                font-size: 35px;
+                color: $tag-color;
+              }
+              .deatilCon {
+                display: flex;
+                align-items: center;
+                .avatar {
+                  margin-right: 1rem;
+                }
+                .nameCon {
+                  .MainText {
+                    font-size: 20px;
+                    font-weight: bolder;
+                    color: $tag-color;
+                  }
+                  .sideText {
+                    font-size: 15px;
+                    color: $tag-color;
+                  }
+                }
+              }
+              .innerDot {
+                .dotIcon {
+                  color: $tag-color;
+                  font-weight: bolder;
+                }
+              }
+            }
+            .TimeCon {
+              display: flex;
+              align-items: center;
+              color: $tag-color;
+              font-weight: bolder;
+              .icon {
+                margin-right: 0.5rem;
+                font-size: 20px;
+              }
+              .AddBtn {
+                background-color: $btn-color;
+              }
+            }
+          }
+          .card2Con {
+            display: flex;
+            align-items: center;
+            .margin {
+              width: 26%;
+              color: $base-color;
+            }
+            .card2 {
+              margin-top: 0.7rem;
+              background-color: rgba($color: $heading-color, $alpha: 0.1);
+              padding: 1.2rem 1.5rem;
+              border-radius: 10px;
+              color: $heading-color;
+              font-weight: bolder;
+              width: 55%;
+              .anotherCon {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .AddBtn {
+                  background-color: $btn-color;
+                }
+              }
+            }
+          }
+          .first {
+            background-color: rgba($color: $heading-color, $alpha: 0.1);
+          }
+          .second {
+            background-color: rgba($color: $patch3-color, $alpha: 0.25);
+          }
+        }
+      }
+    }
+  }
+  .RightCon {
+    width: 35%;
+    background-color: rgba($color: $patch3-color, $alpha: 0.1);
+    padding: 1rem;
+    // height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .RightContent {
+      width: 80%;
+      margin-top: 3rem;
+      .noCardCon {
+        height: 100vh;
+        .conHeader {
+          font-size: 25px;
+        }
+        .conDetail {
+          color: $heading-color;
+          padding: 2rem 0;
+          font-size: 15px;
+          border-bottom: 1px solid rgba($color: $heading-color, $alpha: 0.5);
+          margin-bottom: 2rem;
+        }
+        .conAddBtn {
+          background-color: $btn-color;
+          padding: 0.8rem 0;
+          width: 45%;
+        }
+      }
+      .deatilCon {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        .avatar {
+          margin-right: 1rem;
+        }
+        .nameCon {
+          font-size: 22px;
+          .skill {
+            color: $heading-color;
+          }
+        }
+      }
+      .course {
+        font-size: 22px;
+        margin-bottom: 1rem;
+        font-weight: bolder;
+      }
+      .exam,
+      .header {
+        font-size: 15px;
+        color: $heading-color;
+        margin-bottom: 2rem;
+      }
+      .header {
+        font-size: 16px;
+        margin-bottom: 1rem;
+      }
+      .extraCon {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+        .Eicon {
+          font-size: 28px;
+          margin-right: 1rem;
+        }
+        .detail {
+          .Edate {
+            font-size: 20px;
+            font-weight: bolder;
+          }
+          .Edetail {
+            color: $heading-color;
+          }
+        }
+      }
+      .ExtraContent {
+        margin: 3rem 0;
+        margin-bottom: 5rem;
+      }
+    }
+    .line {
+      height: 2px;
+      border: none;
+      width: 100%;
+      background-color: $font-color;
+    }
+    .ExtraBtn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 4rem;
+      .joinBtn {
+        background-color: $btn-color;
+        padding: 0.7rem 0;
+        font-size: 12px;
+        width: 50%;
+        cursor: pointer;
+      }
+      .askBtn {
+        background-color: rgba($color: $patch3-color, $alpha: 0.1);
+        padding: 0.5rem 0;
+        font-size: 12px;
+        width: 50%;
+        color: $heading-color;
+        font-weight: bolder;
+        cursor: pointer;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .LeftCon {
+      .DateContent {
+        .D1 {
+          width: 10%;
+        }
+        .D2 {
+          width: 50%;
+        }
+      }
+    }
+  }
+  @media (max-width: 1050px) {
+    flex-direction: column;
+    .LeftCon {
+      width: 100%;
+      .DateContent {
+        .D2 {
+          width: 50%;
+        }
+      }
+    }
+    .RightCon {
+      width: 100%;
+    }
+  }
+  @media (max-width: 700px) {
+    .LeftCon {
+      .DateContent {
+        flex-direction: column;
+        .D1,
+        .D2 {
+          width: 100%;
+        }
+        .D1 {
+          .css-bkrceb-MuiButtonBase-root-MuiPickersDay-root,
+          .MuiPickersDay-root:not(.Mui-selected),
+          .MuiPickersDay-root.Mui-selected {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+.addSchedule {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  .patch1 {
+    width: 20%;
+    height: 35%;
+    background-color: $patch1-color;
+    opacity: 0.2;
+    position: absolute;
+    border-radius: 3rem;
+    left: -12%;
+    top: 5%;
+    transform: rotate(20deg);
+  }
+  .patch2 {
+    width: 25%;
+    height: 60%;
+    background-color: $patch2-color;
+    position: absolute;
+    z-index: -1;
+    border-radius: 3rem;
+    transform: rotate(-40deg);
+    right: -19%;
+    bottom: 0%;
+  }
+  .patch3 {
+    width: 70px;
+    height: 70px;
+    background-color: $patch3-color;
+    opacity: 0.4;
+    position: absolute;
+    border-radius: 50%;
+    top: 48%;
+    left: 2%;
+    z-index: -1;
+  }
+  .patch4 {
+    width: 40px;
+    height: 40px;
+    background-color: $patch3-color;
+    opacity: 0.4;
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    top: 35%;
+    right: 10%;
+  }
+  .patch5 {
+    width: 90px;
+    height: 90px;
+    background-color: $patch1-color;
+    opacity: 0.2;
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    right: 25%;
+    bottom: 10%;
+  }
+  .ScheduleContent {
+    margin: 2rem 0;
+    margin-left: 12%;
+    width: 80%;
+    .heading {
+      font-size: 30px;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba($color: $heading-color, $alpha: 0.5);
+      width: 100%;
+    }
+    .formContent {
+      width: 70%;
+      .TimeCon {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        .label {
+          font-size: 18px;
+          width: 30%;
+        }
+        .input {
+          width: 70%;
+        }
+      }
+      .checkCon {
+        display: flex;
+        margin: 2rem 0;
+        .label {
+          font-size: 18px;
+          width: 30%;
+        }
+        .check {
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+        }
+      }
+      .classData {
+        background-color: $select-color;
+        padding: 1rem;
+        border: 1px solid rgba($color: $heading-color, $alpha: 0.5);
+        border-radius: 1rem;
+        .selectCon {
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem;
+          .label {
+            font-size: 18px;
+            width: 30%;
+          }
+          .select {
+            padding: 0.8rem 0;
+            font-size: 15px;
+            width: 30%;
+            border-radius: 5px;
+            border: 1px solid rgba($color: $heading-color, $alpha: 0.5);
+          }
+        }
+        .linkCon {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 1rem;
+          .label {
+            font-size: 18px;
+            width: 30%;
+          }
+          .input {
+            padding: 0.8rem 0;
+            font-size: 15px;
+            width: 70%;
+            border-radius: 5px;
+            border: 1px solid rgba($color: $heading-color, $alpha: 0.5);
+          }
+        }
+      }
+    }
+    .addBtn {
+      background-color: $patch1-color;
+      margin: 2rem 0;
+      width: 20%;
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 850px) {
+    .ScheduleContent {
+      .formContent {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    .ScheduleContent {
+      .formContent {
+        .TimeCon {
+          flex-direction: column;
+          .label {
+            margin-bottom: 1rem;
+            width: 100%;
+          }
+          .input {
+            width: 80%;
+          }
+        }
+        .checkCon {
+          .label {
+            width: 50%;
+          }
+        }
+        .classData {
+          .selectCon {
+            .label {
+              width: 60%;
+            }
+          }
+          .linkCon {
+            flex-direction: column;
+            .label {
+              margin-bottom: 1rem;
+              width: 100%;
+            }
+            .input {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .addBtn {
+        margin: 1rem 0;
+        width: 40%;
+      }
+    }
+  }
+}

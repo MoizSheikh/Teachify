@@ -1,0 +1,105 @@
+$base-color: #ffffff;
+$btn-color: #5956e9;
+$patch1-color: #45dbc9;
+$patch2-color: #e5e5e5;
+$patch3-color: #ffdc60;
+$font-color: #c4c4c4;
+$select-color: #f5f7fb;
+.dashboardBanner {
+  margin-bottom: 3rem;
+  .mainBanner {
+    height: 100%;
+    min-height: 300px;
+    background-color: $btn-color;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    position: relative;
+    .bannerHeader {
+      font-weight: bolder;
+      color: $base-color;
+      font-size: 20px;
+      float: right;
+    }
+    .swipper {
+      .MainCon {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 80%;
+        .innerCon {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-end;
+          width: 100%;
+          .Part1 {
+            width: 60%;
+            color: $base-color;
+            position: absolute;
+            left: 3%;
+            .findBtn {
+              background-color: $base-color;
+              color: black;
+              border-radius: 10px;
+              font-weight: bolder;
+              padding: 0.3rem 3rem;
+              font-size: 18px;
+            }
+          }
+          .Part2 {
+            .imgCon {
+              width: 40%; //might change later
+              float: right;
+            }
+          }
+        }
+        .dots {
+          background-color: $btn-color;
+          color: $base-color;
+        }
+        @media (max-width: 600px) {
+          align-items: flex-end;
+          justify-content: space-between;
+          height: 200px;
+        }
+      }
+      .MuiMobileStepper-dots {
+        display: inherit !important;
+      }
+    }
+  }
+  @media (max-width: 1050px) {
+    .mainBanner {
+      .swipper {
+        .MainCon {
+          .innerCon {
+            .Part1 {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    .mainBanner {
+      .swipper {
+        .MainCon {
+          .innerCon {
+            .Part1 {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .bannerShadow {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #e3e5f7;
+    height: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}

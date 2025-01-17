@@ -1,0 +1,43 @@
+$base-color: #ffffff;
+$btn-color: #5956e9;
+$patch1-color: #45dbc9;
+$patch2-color: #e5e5e5;
+$patch3-color: #ffdc60;
+$font-color: #c4c4c4;
+$select-color: #f5f7fb;
+$heading-color: #727e8f;
+$tag-color: #26247c;
+.Meetings {
+  padding: 1rem 0.5rem;
+  margin-right: 1%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .InboxCon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+    .innerCon {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      .avatar {
+        margin-right: 0.7rem;
+      }
+    }
+    .ProgressHeading {
+      font-size: 12px;
+    }
+  }
+  .ShowBtn {
+    background-color: black;
+    color: $base-color;
+    padding: 0.5rem 2rem;
+  }
+  .SBtn {
+    background-color: $btn-color;
+    color: $base-color;
+  }
+}

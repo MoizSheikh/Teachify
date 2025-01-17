@@ -1,0 +1,38 @@
+// @use-normalize;
+// @use "https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" as *;
+
+//Auth Styles
+@use "./Pages/Auth/SignupTeacher.scss";
+@use "./Pages/Auth/CompleteProfileMain.scss";
+@use "./Pages/Auth/SignupStudent.scss";
+
+//Teacher Styles
+@use "./Pages/Teacher/TeacherDashboar.scss";
+@use "./Pages/Teacher/MyClass.scss";
+@use "./Pages/Teacher/CreateClassCon.scss";
+@use "./Pages/Teacher/Earning.scss";
+
+//Student Styles
+@use "./Pages/Student/StudentDashboard.scss";
+@use "./Pages/Student/Banner.scss";
+
+//Shared Styles
+@use "./Pages/Shared/Shared.scss";
+@use "./Pages/Shared/Navbar.scss";
+@use "./Pages/Shared/Homepage.scss";
+@use "./Pages/Shared/Footer.scss";
+@use "./Pages/Shared/SearchResults.scss";
+@use "./Pages/Shared/Meeting.scss";
+@use "./Pages/Shared/Chats.scss";
+@use "./Pages/Shared/Schedules.scss";
+
+@use "./Pages/Class/ClassView.scss";
+
+.con {
+  display: flex;
+  position: relative;
+}
+
+.w-full {
+  width: 100% !important;
+}

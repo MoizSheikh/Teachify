@@ -1,0 +1,44 @@
+$base-color: #ffffff;
+$btn-color: #5956e9;
+$patch1-color: #45dbc9;
+$patch2-color: #e5e5e5;
+$patch3-color: #ffdc60;
+$font-color: #c4c4c4;
+$select-color: #f5f7fb;
+// .MuiLinearProgress-colorPrimary{
+//     // background-color: transparent !important;
+//     background-color: $patch2-color !important;
+//     color : red !important
+// }
+// .MuiLinearProgress-bar{
+//     background-color: $patch1-color !important;
+//     color : red !important
+// }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.MuiTableContainer-root,
+.MuiTableCell-body {
+  border: none !important;
+  box-shadow: none !important;
+}
+.MuiTableCell-root {
+  border: none !important;
+}
+.MuiStepConnector-lineHorizontal,
+.MuiStepConnector-line {
+  display: none !important;
+}
+.Mui-active,
+.Mui-completed {
+  color: #45dbc9 !important;
+}
+.line {
+  color: $font-color;
+  background-color: $font-color;
+  height: 2px;
+  border: none;
+}
+.MuiMobileStepper-dots {
+  display: none !important;
+}

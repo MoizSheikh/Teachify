@@ -1,0 +1,271 @@
+$base-color: #ffffff;
+$btn-color: #5956e9;
+$patch1-color: #45dbc9;
+$patch2-color: #e5e5e5;
+$patch3-color: #ffdc60;
+$font-color: #c4c4c4;
+$select-color: #f5f7fb;
+$heading-color: #727e8f;
+$star-color: #ffe202;
+.chats {
+  background-color: $select-color;
+  width: 100%;
+  .content {
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 5rem;
+    .LeftCon,
+    .RightCon,
+    .UpperRightCon {
+      width: 68%;
+      padding: 1rem 2rem;
+      background-color: $base-color;
+      border-radius: 2rem;
+      height: 100vh;
+    }
+    .UpperRightCon {
+      display: none;
+    }
+    .LeftCon {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      .innerLeft {
+        height: 100vh;
+        border-right: 1px solid $heading-color;
+        // padding-right: 1rem;
+        width: 28%;
+        .header {
+          margin-bottom: 1rem;
+          padding: 0 1rem;
+          .Lcon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .select {
+              padding: 0.5rem;
+              font-size: 17px;
+              width: 70%;
+              color: $heading-color;
+              border: none;
+              cursor: pointer;
+            }
+            .select:focus {
+              outline: none;
+            }
+            .searchBtn {
+              background-color: $base-color;
+              border: none;
+              // width: 30%;
+              cursor: pointer;
+              .icon {
+                font-size: 20px;
+                color: $heading-color;
+              }
+            }
+          }
+          .input {
+            padding: 0.7rem 0;
+            width: 100%;
+            margin: 0.5rem 0;
+            border: 1px solid rgba($color: $heading-color, $alpha: 0.5);
+          }
+        }
+        .ProfileCon {
+          .con {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            width: 100%;
+            cursor: pointer;
+            .avatar {
+              margin-right: 0.5rem;
+              margin-left: 1rem;
+            }
+            .DetailCon {
+              .name {
+                font-weight: bolder;
+                color: $heading-color;
+              }
+              .msg {
+                font-size: 15px;
+                color: $heading-color;
+              }
+            }
+          }
+          .con:hover {
+            background-color: $select-color;
+          }
+        }
+      }
+      .innerRight {
+        width: 72%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 95vh;
+        color: $heading-color;
+        .Rheader {
+          width: 100%;
+          border-bottom: 1px solid rgba($color: $heading-color, $alpha: 0.5);
+          .headerContent {
+            margin-left: 2rem;
+            .name {
+              margin-bottom: 0.5rem;
+            }
+            .timeCon {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              font-size: 13px;
+              width: 80%;
+              margin-bottom: 1rem;
+              div {
+                padding-right: 1rem;
+              }
+              .seen {
+                border-right: 1px solid
+                  rgba($color: $heading-color, $alpha: 0.5);
+              }
+            }
+          }
+        }
+        .body {
+          margin-left: 2rem;
+          height: 100vh;
+          margin-top: 1rem;
+          width: 93%;
+          .Msgcon {
+            overflow-y: scroll;
+            // transform: rotate(180deg);
+            // direction: rtl;
+            // text-align: left;
+            height: 55vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            // justify-content: flex-end;
+            .eachMsg {
+              display: flex;
+              align-items: center;
+              margin-bottom: 2rem;
+              // direction: ltr;
+              // overflow: hidden;
+              // transform: rotate(180deg);
+              .avatar {
+                margin-right: 1rem;
+              }
+              .DetailCon {
+                .msg {
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+          .sendCon {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            flex-direction: column;
+            margin-top: 1rem;
+            .textarea {
+              border: 1px solid rgba($color: $heading-color, $alpha: 0.5);
+              border-radius: 5px;
+              width: 100%;
+              font-size: 13px;
+              background-color: $base-color;
+              margin-bottom: 1rem;
+            }
+            .sendBtn {
+              padding: 0.6rem 2rem;
+              border: none;
+              background-color: black;
+              color: $base-color;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .RightCon,
+    .UpperRightCon {
+      width: 25%;
+      .heading {
+        font-size: 20px;
+        color: $heading-color;
+        margin-bottom: 1rem;
+      }
+      .picCon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        .name {
+          margin: 1rem 0;
+          font-size: 18px;
+          color: $heading-color;
+        }
+      }
+      .detailCon {
+        .con {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .heading {
+            font-size: 15px;
+          }
+          .value {
+            color: $heading-color;
+          }
+        }
+      }
+    }
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      .UpperRightCon {
+        display: unset;
+        height: unset;
+        width: 85%;
+        margin-bottom: 1rem;
+      }
+      .RightCon {
+        display: none;
+      }
+      .LeftCon {
+        width: 100%;
+      }
+    }
+    @media (max-width: 750px) {
+      margin: 2rem;
+      .LeftCon {
+        flex-direction: column;
+        height: unset;
+        width: 105%;
+        .innerLeft {
+          width: 100%;
+          border-right: none;
+          border-bottom: 1px solid rgba($color: $heading-color, $alpha: 0.5);
+          height: unset;
+          padding-bottom: 1rem;
+        }
+        .innerRight {
+          width: 100%;
+          .Rheader {
+            margin-top: 1rem;
+            .headerContent {
+              .timeCon {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

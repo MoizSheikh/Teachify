@@ -1,0 +1,72 @@
+$base-color: #ffffff;
+$btn-color: #5956e9;
+$patch1-color: #45dbc9;
+$patch2-color: #e5e5e5;
+$patch3-color: #ffdc60;
+$font-color: #c4c4c4;
+$select-color: #f5f7fb;
+.Earnings {
+  // height: 400px;
+  .header {
+    height: 10%;
+  }
+  .detailRow {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    margin-top: 1rem;
+    .earningInfo {
+      width: 30%;
+      .CardMainHeading {
+        font-size: 30px;
+      }
+      .ProfileCon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 1rem 0;
+        .avatar {
+          margin-right: 1rem;
+        }
+      }
+      .percentage {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .DownArrow {
+          color: $patch1-color;
+          font-size: 25px;
+        }
+      }
+    }
+    .graph {
+      height: 100%;
+      width: 70%;
+    }
+  }
+  .summaryInfo {
+    border: 1px solid grey;
+    border-radius: 15px;
+    width: 100%;
+    display: flex;
+    height: 30%;
+    .rightBorder {
+      border-right: 1px solid grey;
+    }
+    .eachSummary {
+      width: 25%;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      .MainHeading {
+        color: $font-color;
+        font-size: 20px;
+      }
+      .count {
+        font-size: 35px;
+      }
+    }
+  }
+}

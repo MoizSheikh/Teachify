@@ -1,0 +1,454 @@
+$base-color: #ffffff;
+$btn-color: #5956e9;
+$patch1-color: #45dbc9;
+$patch2-color: #e5e5e5;
+$patch3-color: #ffdc60;
+$font-color: #c4c4c4;
+$select-color: #f5f7fb;
+$heading-color: #727e8f;
+$star-color: #ffe202;
+$note-color: #e95678;
+.signupStudentModal {
+  .tabs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .input {
+    border-color: rgba($color: $heading-color, $alpha: 0.5);
+    border-radius: 5px;
+  }
+  .input:focus {
+    outline: none;
+  }
+  .css-heg063-MuiTabs-flexContainer {
+    justify-content: center;
+  }
+  .MuiDialogTitle-root
+    + .css-ypiqx9-MuiDialogContent-root::-webkit-scrollbar-track {
+    background-color: #dbdbdb;
+    border-radius: 5px;
+  }
+
+  .MuiDialogTitle-root + .css-ypiqx9-MuiDialogContent-root::-webkit-scrollbar {
+    width: 6px;
+    background-color: #dbdbdb;
+    border-radius: 5px;
+  }
+
+  .MuiDialogTitle-root
+    + .css-ypiqx9-MuiDialogContent-root::-webkit-scrollbar-thumb {
+    background-color: $patch1-color;
+    border-radius: 5px;
+  }
+  .editAvatar {
+    width: 100%;
+    // height: 70vh;
+    .heading {
+      font-size: 18px;
+      color: $heading-color;
+      text-align: center;
+    }
+    .note {
+      font-size: 16px;
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .AvatarContent {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      .selectCon {
+        padding-right: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 65vh;
+        .select {
+          padding: 0.5rem;
+          border-radius: 1rem;
+          border: 2px solid rgba($color: $heading-color, $alpha: 0.5);
+          margin-top: 1rem;
+        }
+        .BackBtn {
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+          .icon {
+            font-size: 30px;
+            font-weight: bolder;
+          }
+        }
+      }
+      .avatarSelect {
+        // height: 30vh;
+        background-color: $base-color;
+        .AvatarimgButtons {
+          height: 60vh;
+          overflow-y: scroll;
+          .avatarBtn,
+          .FirstTimeavatarBtn {
+            position: relative;
+            border: 1px solid rgba($color: $heading-color, $alpha: 0.5);
+            border-radius: 1rem;
+            background-color: $base-color;
+            margin: 1rem;
+            cursor: pointer;
+          }
+          .avatarBtn:before {
+            position: absolute;
+            content: "";
+            background: rgba($color: $base-color, $alpha: 0.4);
+            width: 155px;
+            height: 155px;
+            border-radius: 1rem;
+            pointer-events: none;
+          }
+          .SelectedAvatar {
+            border: 1px solid $btn-color;
+          }
+          .SelectedAvatar:before {
+            position: absolute;
+            content: "";
+            background: rgba($color: $base-color, $alpha: 0.4);
+            width: unset;
+            height: unset;
+            border-radius: 1rem;
+            pointer-events: none;
+          }
+        }
+        .AvatarimgButtons::-webkit-scrollbar-track {
+          background-color: #dbdbdb;
+          border-radius: 5px;
+        }
+
+        .AvatarimgButtons::-webkit-scrollbar {
+          width: 6px;
+          background-color: #dbdbdb;
+          border-radius: 5px;
+        }
+
+        .AvatarimgButtons::-webkit-scrollbar-thumb {
+          background-color: $patch1-color;
+          border-radius: 5px;
+        }
+      }
+      .avatarSelect::-webkit-scrollbar-track {
+        background-color: #dbdbdb;
+        border-radius: 5px;
+      }
+
+      .avatarSelect::-webkit-scrollbar {
+        width: 6px;
+        background-color: #dbdbdb;
+        border-radius: 5px;
+      }
+
+      .avatarSelect::-webkit-scrollbar-thumb {
+        background-color: $patch1-color;
+        border-radius: 5px;
+      }
+      .BtnCon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 98%;
+        margin-bottom: 2rem;
+        .SaveBtn {
+          height: 40px;
+          width: 40px;
+          border: none;
+          background-color: $patch1-color;
+          color: $base-color;
+          border-radius: 50%;
+          cursor: pointer;
+          .icon {
+            color: $base-color;
+            font-size: 20px;
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+  }
+  .Profile {
+    .profileCon {
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      .heading {
+        color: $heading-color;
+      }
+      .DCon {
+        .avatar {
+          margin-right: 2rem;
+        }
+        .BtnDiv {
+          width: 100%;
+          .innerBtn {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            .UBtn,
+            .DBtn {
+              font-size: 14px;
+              width: 18%;
+              margin-right: 1rem;
+            }
+            .DBtn {
+              border: 1px solid rgba($color: $heading-color, $alpha: 0.5);
+              color: black;
+            }
+          }
+          .data {
+            font-size: 15px;
+            color: $heading-color;
+          }
+        }
+      }
+    }
+    .fieldsCon {
+      .con {
+        .select {
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+  .nextCon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 2rem;
+    .UBtn {
+      margin-left: 1rem;
+    }
+  }
+  .security {
+    .Header {
+      border-bottom: 1px solid rgba($color: $heading-color, $alpha: 0.5);
+      padding-bottom: 1rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-top: 1rem;
+      .head1 {
+        width: 100%;
+        .heading {
+          font-size: 20px;
+          font-weight: bolder;
+        }
+        .detail {
+          font-size: 15px;
+          color: $heading-color;
+        }
+      }
+      .note {
+        text-align: center;
+        color: $note-color;
+      }
+    }
+    .fieldsCon {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      .Field1 {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        .input {
+          padding: 0.8rem 0;
+          margin-top: 1rem;
+        }
+        .eduCon {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: space-between;
+          .input {
+            width: 20%;
+          }
+          .select {
+            width: 35%;
+          }
+        }
+      }
+      .Field2 {
+        .subs {
+          width: 100%;
+          margin: 1rem 0;
+        }
+        .con {
+          margin-bottom: 1rem;
+          justify-content: space-between;
+          .subName {
+            width: 65%;
+            margin-right: 1rem;
+          }
+          .subCode {
+            width: 30%;
+          }
+        }
+        .addCon {
+          margin-top: 0.7rem;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          .addBtn {
+            background-color: $patch1-color;
+            color: $base-color;
+            font-size: 16px;
+            border: none;
+            padding: 0.7rem 0;
+            width: 20%;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .Billing {
+    .payCon {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 1rem 0;
+      .payBtn {
+        background-color: $base-color;
+        border-radius: 1rem;
+        border: 1px solid rgba($color: $heading-color, $alpha: 0.5);
+        cursor: pointer;
+      }
+    }
+    .method {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 1rem;
+      .Field1 {
+        width: 40%;
+        .header {
+          font-weight: bolder;
+          color: $heading-color;
+        }
+        .payLabel {
+          font-size: 15px;
+          font-weight: lighter;
+          color: $heading-color;
+          margin-top: 1rem;
+        }
+        .input {
+          width: 100%;
+        }
+      }
+      .Field2 {
+        .header {
+          font-weight: bolder;
+          color: $heading-color;
+        }
+        .payLabel {
+          font-size: 15px;
+          font-weight: lighter;
+          color: $heading-color;
+          margin-top: 1rem;
+        }
+        .input {
+          width: 100%;
+        }
+        .CardDetail {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          .valid {
+            width: 50%;
+          }
+          .Amount {
+            width: 40%;
+          }
+        }
+      }
+    }
+    .css-5xe99f-MuiLinearProgress-bar1 {
+      background-color: $star-color;
+    }
+  }
+  .MuiLinearProgress-colorPrimary {
+    background-color: $patch2-color !important;
+  }
+  @media (max-width: 800px) {
+    .Profile {
+      .fieldsCon {
+        .con {
+          flex-direction: column;
+          .input {
+            width: 100%;
+          }
+          .select {
+            padding: 0.8rem 0;
+          }
+        }
+      }
+    }
+    .security {
+      .Header {
+        flex-direction: column;
+        .head1 {
+          margin-bottom: 1rem;
+        }
+      }
+      .fieldsCon {
+        flex-direction: column;
+        .Field1 {
+          width: 100%;
+        }
+      }
+    }
+    .Billing {
+      .payCon {
+        flex-wrap: wrap;
+        .payBtn {
+          margin: 1rem 0;
+        }
+      }
+      .method {
+        flex-direction: column;
+        .Field1 {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    .nextCon {
+      flex-direction: column;
+      .UBtn {
+        margin-top: 1rem;
+      }
+    }
+    .Profile {
+      .profileCon {
+        .DCon {
+          .BtnDiv {
+            .innerBtn {
+              flex-direction: column;
+              .UBtn,
+              .DBtn {
+                width: 100%;
+              }
+              .UBtn {
+                margin-bottom: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

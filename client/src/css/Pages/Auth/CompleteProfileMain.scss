@@ -1,0 +1,182 @@
+$base-color: #ffffff;
+$btn-color: #5956e9;
+$patch1-color: #45dbc9;
+$patch2-color: #e5e5e5;
+$patch3-color: #ffdc60;
+$font-color: #c4c4c4;
+$select-color: #f5f7fb;
+$heading-color: #727e8f;
+.Profile {
+  .profileCon {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid $font-color;
+    .DCon {
+      display: flex;
+      align-items: center;
+      margin-top: 0.3rem;
+      .avatar {
+        margin-right: 0.6rem;
+        font-size: 15px;
+      }
+      .detail {
+        font-size: 15px;
+      }
+    }
+  }
+  .fieldsCon {
+    .con {
+      .input {
+        width: 47%;
+        margin: 0.4rem 0.4rem;
+      }
+    }
+    .textarea {
+      width: 96%;
+      margin: 0.4rem 0.4rem;
+      border: none;
+      border: 1px solid $font-color;
+      border-radius: 5px;
+      height: 90px !important;
+      font-size: 18px;
+    }
+  }
+  .UBtn {
+    background-color: $btn-color;
+    color: $base-color;
+    margin-left: 0.4rem;
+  }
+}
+.security {
+  .passCon {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid $font-color;
+    .detail {
+      font-size: 14px;
+      margin-top: 0.4rem;
+      color: $heading-color;
+    }
+  }
+  .fieldCon {
+    .con {
+      .input {
+        width: 50%;
+        margin: 0.4rem 0.4rem;
+      }
+    }
+    .input {
+      width: 98%;
+      margin: 0.2rem 0.4rem;
+    }
+  }
+  .Confirmation {
+    margin: 0.5rem 0;
+    .heading {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .UBtn {
+    background-color: $btn-color;
+    color: $base-color;
+    margin-left: 0.4rem;
+  }
+}
+.Billing {
+  .payCon {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid $font-color;
+    .detail {
+      font-size: 14px;
+      margin-top: 0.3rem;
+      color: $heading-color;
+    }
+  }
+  .method {
+    .payment {
+      display: flex;
+      align-items: center;
+      .con {
+        border: 1px solid $font-color;
+        border-radius: 5px;
+        margin: 0.5rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0.4rem;
+        .visa {
+          color: $btn-color;
+        }
+      }
+    }
+    .Con {
+      margin: 0.4rem 0;
+      .input {
+        width: 60%;
+        margin: 0.4rem 0;
+      }
+    }
+  }
+  .heading {
+    font-size: 15px;
+  }
+  .UBtn {
+    background-color: $btn-color;
+    color: $base-color;
+    margin-left: 0.2rem;
+  }
+}
+.account {
+  .AccCon {
+    padding: 0.3rem 0;
+    .detail {
+      font-size: 14px;
+      margin-top: 0.3rem;
+      color: $heading-color;
+    }
+  }
+  .linkCon {
+    border-bottom: 1px solid $font-color;
+    margin-bottom: 0.4rem;
+    .con {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid $font-color;
+      border-radius: 10px;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      .part {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .icon {
+          font-size: 28px;
+          margin-right: 0.4rem;
+        }
+        .discord {
+          color: $btn-color;
+        }
+        .email {
+          color: $patch1-color;
+          font-size: 13px;
+        }
+        @media (max-width: 400px) {
+          .icon {
+            font-size: 25px;
+          }
+          .email {
+            font-size: 12px;
+          }
+        }
+      }
+      .DisBtn {
+        color: $heading-color;
+      }
+    }
+  }
+  .UBtn {
+    background-color: $btn-color;
+    color: $base-color;
+    margin-left: 0.2rem;
+  }
+}

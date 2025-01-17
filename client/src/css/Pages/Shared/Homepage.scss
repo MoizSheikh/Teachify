@@ -1,0 +1,554 @@
+$base-color: #ffffff;
+$btn-color: #5956e9;
+$patch1-color: #45dbc9;
+$patch2-color: #e5e5e5;
+$patch3-color: #ffdc60;
+$font-color: #c4c4c4;
+$select-color: #f5f7fb;
+$heading-color: #727e8f;
+$tag-color: #26247c;
+$star-color: #f8b129;
+$close-color: #d0b95f;
+$option-color: #908ee6;
+$patch4-color: #ffe793;
+.homepage {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  .patch1 {
+    position: absolute;
+    z-index: -1;
+    width: 70%;
+    height: 45%;
+    background-color: $btn-color;
+    border-radius: 4rem;
+    transform: rotate(15deg);
+    right: -25%;
+    top: -25%;
+  }
+  .patch2 {
+    position: absolute;
+    z-index: -1;
+    width: 20%;
+    height: 10%;
+    background-color: $patch1-color;
+    border-radius: 3rem;
+    transform: rotate(30deg);
+    top: -5%;
+    left: -4%;
+  }
+  .patch3 {
+    position: absolute;
+    z-index: -1;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba($color: $star-color, $alpha: 0.8);
+    top: 13%;
+    left: -2%;
+  }
+  .patch4 {
+    position: absolute;
+    z-index: -1;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba($color: $star-color, $alpha: 0.8);
+    top: 9%;
+    left: 11%;
+  }
+  .patch5 {
+    position: absolute;
+    z-index: -1;
+    width: 50px;
+    height: 50px;
+    background-color: $patch1-color;
+    border-radius: 0.5rem;
+    transform: rotate(30deg);
+    top: 7.8%;
+    left: 35%;
+  }
+  .patch6 {
+    background-color: rgba($color: $star-color, $alpha: 1);
+    z-index: 0;
+    top: 24.5%;
+    left: 34.5%;
+  }
+  .patch7 {
+    z-index: 0;
+    top: 26.5%;
+    left: 60%;
+  }
+  .patch8 {
+    position: absolute;
+    z-index: -1;
+    width: 20%;
+    height: 10%;
+    background-color: $patch1-color;
+    border-radius: 3rem;
+    transform: rotate(50deg);
+    right: -10%;
+    top: 40%;
+  }
+  .patch9 {
+    top: 46.5%;
+    left: 48%;
+  }
+  .patch10 {
+    top: 50.5%;
+    left: 72%;
+  }
+  .patch11 {
+    top: 68%;
+    left: 8%;
+  }
+  .patch12 {
+    z-index: 0;
+    top: 71%;
+    left: 19%;
+  }
+  .patch13 {
+    position: absolute;
+    z-index: -1;
+    width: 20%;
+    height: 10%;
+    background-color: $patch1-color;
+    border-radius: 3rem;
+    transform: rotate(25deg);
+    top: 78%;
+    left: -5%;
+  }
+  .patch14 {
+    position: absolute;
+    z-index: -1;
+    width: 23%;
+    height: 10%;
+    background-color: $btn-color;
+    border-radius: 3rem;
+    transform: rotate(38deg);
+    top: 85%;
+    right: -15%;
+  }
+  .patch15 {
+    top: 85%;
+  }
+  .patch16 {
+    top: 88%;
+    left: 64%;
+  }
+  .patch17 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: $patch4-color;
+    left: 46%;
+    top: 4%;
+    z-index: -1;
+  }
+  .patch18 {
+    right: unset;
+    top: 52%;
+    left: -16%;
+  }
+  .part1 {
+    width: 100;
+    height: 105vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0.5rem 0;
+      border-bottom: 2px solid rgba($color: $heading-color, $alpha: 0.6);
+      .MainLogo {
+        margin-left: 3rem;
+        display: flex;
+        align-items: center;
+        height: 40px !important;
+        .Logoimage {
+          width: 100px;
+          height: 100% !important;
+          object-fit: cover;
+        }
+        .select {
+          margin-left: 1rem;
+          .selectHeader {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-weight: bold;
+            .icon {
+              font-size: 18px;
+              margin-right: 0.5rem;
+            }
+          }
+          .selectOptions {
+            background-color: $option-color;
+            border-radius: 1rem;
+            position: absolute;
+            margin-top: 1rem;
+            .option {
+              display: flex;
+              align-items: center;
+              padding: 0.3rem 0.5rem;
+              border-radius: 1rem;
+              cursor: pointer;
+              .Optionimage {
+                width: 25px;
+                height: 25px;
+                margin-right: 0.5rem;
+              }
+            }
+            .option:hover {
+              background-color: rgba($color: $heading-color, $alpha: 0.3);
+            }
+          }
+        }
+      }
+      .navBtns {
+        margin-right: 3rem;
+        .signBtn {
+          color: $base-color;
+          margin-right: 2rem;
+        }
+        .joinBtn {
+          background-color: $patch1-color;
+        }
+      }
+    }
+    .part1Content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+      margin-top: 3rem;
+      .data {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        // width: 30%;
+        .detailCon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          .heading {
+            font-size: 30px;
+            font-weight: bolder;
+            margin-bottom: 1.5rem;
+            width: 65%;
+          }
+          .detail {
+            font-size: 15px;
+            margin-bottom: 1.5rem;
+            width: 65%;
+          }
+        }
+        .inputCon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          border: 1px solid rgba($color: $heading-color, $alpha: 0.5);
+          border-radius: 5px;
+          background-color: $base-color;
+          .icon {
+            color: $heading-color;
+            font-size: 35px;
+            margin: 0 0.5rem;
+          }
+          .input {
+            width: 100%;
+            padding: 0.8rem 0;
+            font-size: 18px;
+            border: none;
+            background-color: $base-color;
+          }
+          .input:focus {
+            outline: none;
+          }
+          .searchBtn {
+            padding: 0.85rem 0;
+            background-color: $patch1-color;
+            width: 35%;
+            color: $base-color;
+          }
+        }
+        .optionCon {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          margin-top: 1rem;
+          .tag {
+            background-color: rgba($color: $base-color, $alpha: 0.4);
+            border: 2px solid rgba($color: $heading-color, $alpha: 0.5);
+            border-radius: 1rem;
+            cursor: pointer;
+          }
+        }
+      }
+      .pic {
+        width: 50%;
+      }
+    }
+    .downBtn {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      background-color: $patch1-color;
+      border: none;
+      font-size: 30px;
+      color: $base-color;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+  .part2 {
+    background-color: #fcfcff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    .heading {
+      font-size: 30px;
+      font-weight: bolder;
+      margin-bottom: 5rem;
+      z-index: 2;
+      span {
+        color: $star-color;
+      }
+    }
+    .contentCon {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+      .Con {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 30%;
+        z-index: 2;
+        .data {
+          .main {
+            font-size: 20px;
+            font-weight: bolder;
+            text-align: center;
+            margin-bottom: 1rem;
+            z-index: 2;
+          }
+          .detail {
+            font-size: 15px;
+            text-align: center;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+  .part3 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .Con3 {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      z-index: 2;
+      .heading {
+        font-size: 35px;
+        font-weight: bolder;
+        margin-bottom: 1.5rem;
+      }
+      .detail {
+        font-size: 15px;
+        margin-bottom: 1.5rem;
+        margin-right: 1rem;
+      }
+      .BtnCon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        .startBtn {
+          background-color: $btn-color;
+        }
+      }
+    }
+  }
+  .part4 {
+    background-color: #fcfcff;
+    .Con4 {
+      .innerCon4 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        z-index: 2;
+        .heading {
+          width: 70%;
+        }
+      }
+    }
+  }
+  .part5 {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    .heading {
+      font-size: 35px;
+      font-weight: bolder;
+      z-index: 2;
+    }
+    .startBtn {
+      background-color: $btn-color;
+      z-index: 2;
+    }
+  }
+  @media (max-width: 900px) {
+    .part1 {
+      .part1Content {
+        width: 98%;
+      }
+    }
+    .part3 {
+      .Con3 {
+        width: 50%;
+        .image {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    .part1 {
+      height: unset;
+      .navbar {
+        .MainLogo {
+          margin-left: 1rem;
+        }
+        .navBtns {
+          margin-right: 1rem;
+        }
+      }
+      .part1Content {
+        width: 90%;
+        flex-direction: column-reverse;
+        margin-bottom: 2rem;
+        .data {
+          .optionCon {
+            flex-wrap: wrap;
+          }
+        }
+        .pic {
+          .image {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    .part2 {
+      padding-top: 2rem;
+      .heading {
+        font-size: 25px;
+        text-align: center;
+      }
+      .contentCon {
+        width: 100%;
+      }
+    }
+    .part3 {
+      .Con3 {
+        .heading {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    .part1 {
+      .part1Content {
+        .data {
+          .detailCon {
+            .heading {
+              font-size: 25px;
+            }
+          }
+          .inputCon {
+            .input {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+    .part2 {
+      height: unset;
+      .contentCon {
+        flex-direction: column;
+        .Con {
+          width: 90%;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    .part3 {
+      flex-direction: column;
+      height: unset;
+      .Con3 {
+        width: 90%;
+        .image {
+          width: 70%;
+          margin-top: 2rem;
+        }
+        .BtnCon {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    .part4 {
+      padding-top: 2rem;
+    }
+    .part5 {
+      height: 40vh;
+      .heading {
+        font-size: 25px;
+        text-align: center;
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    .part1 {
+      .navbar {
+        .MainLogo {
+          flex-direction: column;
+          .select {
+            .selectHeader {
+              margin-top: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

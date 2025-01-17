@@ -1,0 +1,149 @@
+$base-color: #ffffff;
+$btn-color: #5956e9;
+$patch1-color: #45dbc9;
+$patch2-color: #e5e5e5;
+$patch3-color: #ffdc60;
+$font-color: #c4c4c4;
+$select-color: #f5f7fb;
+$heading-color: #727e8f;
+.MainDashboard {
+  width: 97%;
+  margin: auto 2%;
+  .SwitchCon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    div {
+      margin: 0 3rem;
+    }
+  }
+  .row1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    .editBtn {
+      .EBtn {
+        background-color: black;
+        color: $base-color;
+        padding: 0.5rem 3rem;
+      }
+    }
+  }
+  .select1 {
+    padding: 0.7rem 0;
+    width: 30%;
+    margin-bottom: 0.5rem;
+    background-color: $select-color;
+    border-color: $font-color;
+  }
+  .ProgressHeading {
+    font-size: 12px;
+  }
+  .row2 {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    .activeOrder {
+      width: 85%;
+      margin-right: 2%;
+      min-height: 400px;
+    }
+    .profileSummary {
+      min-height: 400px;
+      width: 27%;
+      .Header {
+        display: flex;
+        align-items: center;
+        .avatar {
+          margin: 0 1rem;
+        }
+      }
+      .ProfileCon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem 0;
+      }
+      .Name {
+        font-size: 15px;
+      }
+      .inbox {
+        .InboxCon {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          margin: 1rem 0;
+          overflow-x: hidden;
+          .avatar {
+            margin-right: 1rem;
+          }
+        }
+      }
+      .ViewBtn {
+        color: black;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+      }
+    }
+    @media (max-width: 550px) {
+      flex-direction: column;
+      .activeOrder {
+        margin: 1rem;
+        width: 100%;
+      }
+      .profileSummary {
+        margin: 1rem;
+        width: 100%;
+      }
+    }
+  }
+  .row3 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+    .Earnings {
+      width: 50%;
+      margin-right: 2%;
+    }
+    .Meetings {
+      width: 20%;
+    }
+    .Goals {
+      width: 25%;
+    }
+    @media (max-width: 750px) {
+      flex-direction: column;
+      .Earnings {
+        margin: 1rem;
+        width: 100%;
+      }
+      .Meetings {
+        margin: 1rem;
+        width: 100%;
+      }
+      .Goals {
+        margin: 1rem;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.teacherDashboardCard {
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 1rem 2rem;
+  .CompleteOrderBtn {
+    background-color: $btn-color;
+    color: $base-color;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+}

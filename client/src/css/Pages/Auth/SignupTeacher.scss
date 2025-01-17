@@ -1,0 +1,1075 @@
+$base-color: #ffffff;
+$btn-color: #5956e9;
+$patch1-color: #45dbc9;
+$patch2-color: #e5e5e5;
+$patch3-color: #ffdc60;
+$font-color: #c4c4c4;
+$select-color: #f5f7fb;
+$heading-color: #727e8f;
+$star-color: #ffe202;
+$note-color: #e95678;
+body {
+  background-color: $base-color;
+}
+.SignupTeacherCon {
+  width: 100%;
+  .wizard1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    .patch1 {
+      width: 15%;
+      height: 35%;
+      background-color: $patch1-color;
+      opacity: 0.2;
+      position: absolute;
+      right: -2%;
+      top: -5%;
+      border-radius: 3rem;
+      transform: rotate(20deg);
+    }
+    .patch2 {
+      width: 25%;
+      height: 60%;
+      background-color: $patch2-color;
+      position: absolute;
+      z-index: -1;
+      border-radius: 3rem;
+      transform: rotate(50deg);
+      left: -20%;
+      top: 40%;
+    }
+    .patch3 {
+      width: 50px;
+      height: 50px;
+      background-color: $patch1-color;
+      opacity: 0.2;
+      position: absolute;
+      border-radius: 0.2rem;
+      transform: rotate(15deg);
+      left: 25%;
+      bottom: -1%;
+    }
+    .patch4 {
+      width: 40px;
+      height: 40px;
+      background-color: $patch3-color;
+      opacity: 0.4;
+      position: absolute;
+      border-radius: 50%;
+      left: 30%;
+      bottom: 5%;
+    }
+    .WizardCon {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      width: 33%;
+      margin-top: 5%;
+      margin-left: 20%;
+      h3 {
+        font-weight: bolder !important;
+      }
+      .ConPart {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 1.5rem;
+        div {
+          font-size: 14px;
+        }
+        .icon {
+          font-size: 60px !important;
+          color: $btn-color;
+          margin-right: 1rem;
+        }
+      }
+
+      //mui for this component
+      .MuiLinearProgress-colorPrimary {
+        // background-color: transparent !important;
+        background-color: $patch2-color !important;
+        color: red !important;
+      }
+      .MuiLinearProgress-bar {
+        background-color: $patch1-color !important;
+        color: red !important;
+      }
+      .continue-btn {
+        background-color: $btn-color;
+        padding: 0.5rem 1.8rem;
+      }
+      @media (max-width: 1240px) {
+        width: 40%;
+      }
+      @media (max-width: 830px) {
+        width: 60%;
+      }
+      @media (max-width: 560px) {
+        width: 80%;
+        margin-top: 5%;
+        margin-left: 5%;
+        .ConPart {
+          margin-bottom: 2rem;
+        }
+        .continue-btn {
+          padding: 0.5rem 1.5rem;
+        }
+      }
+    }
+  }
+  .wizard2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    .patch1 {
+      width: 55%;
+      height: 100%;
+      background-color: $patch1-color;
+      opacity: 0.1;
+      position: absolute;
+      right: -15%;
+      top: -12%;
+      z-index: -1;
+      border-radius: 6rem;
+      transform: rotate(10deg);
+    }
+    .patch2 {
+      width: 25%;
+      height: 60%;
+      background-color: $btn-color;
+      opacity: 0.3;
+      position: absolute;
+      z-index: -1;
+      border-radius: 2rem;
+      transform: rotate(10deg);
+      top: -50%;
+      left: -15%;
+    }
+    .patch3 {
+      width: 70px;
+      height: 70px;
+      background-color: $patch3-color;
+      opacity: 0.2;
+      position: absolute;
+      border-radius: 50%;
+      left: 40%;
+      top: 33%;
+      z-index: -1;
+    }
+    .WizardCon {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 7%;
+      margin-left: 5%;
+      .Part1 {
+        .image {
+          width: 100%;
+          margin-right: 1rem;
+        }
+      }
+      .Part2 {
+        margin: 0 1rem;
+        width: 90%;
+        h3 {
+          font-weight: bolder !important;
+        }
+        .main-detail {
+          width: 80%;
+          font-size: 14px;
+        }
+        .ConPart {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex-direction: column;
+          margin-bottom: 2rem;
+          .Con1,
+          .Con2 {
+            display: flex;
+            .container {
+              margin: 1rem 2rem;
+              width: 30%;
+              .detail {
+                font-size: 14px;
+              }
+              .icon {
+                font-size: 40px !important;
+                font-weight: bold;
+                color: $btn-color;
+                margin: 1rem 0;
+              }
+            }
+            .first {
+              margin-left: 0;
+            }
+          }
+        }
+        .continue-btn {
+          background-color: $btn-color;
+          padding: 0.5rem 1.7rem;
+        }
+        .back-btn {
+          color: $btn-color;
+          padding: 0.5rem 1.7rem;
+        }
+      }
+      @media (max-width: 1000px) {
+        flex-direction: column;
+        .Part1 {
+          .image {
+            width: 500px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 2rem;
+          }
+        }
+        .Part2 {
+          .main-detail {
+            width: unset;
+          }
+        }
+      }
+      @media (max-width: 550px) {
+        .Part1 {
+          .image {
+            width: 300px;
+            height: 300px;
+          }
+        }
+        .Part2 {
+          margin: 0;
+          .main-detail {
+            width: unset;
+          }
+          .ConPart {
+            .Con1,
+            .Con2 {
+              flex-direction: column;
+              .container {
+                margin-left: 0;
+                margin: 0;
+                width: unset;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .wizard3 {
+    position: relative;
+    .patch1 {
+      width: 25%;
+      height: 60%;
+      background-color: $patch1-color;
+      opacity: 0.3;
+      position: absolute;
+      z-index: -1;
+      border-radius: 2rem;
+      transform: rotate(10deg);
+      top: -45%;
+      left: -17%;
+    }
+    .patch2 {
+      width: 25%;
+      height: 60%;
+      background-color: $patch2-color;
+      position: absolute;
+      z-index: -1;
+      border-radius: 4rem;
+      transform: rotate(40deg);
+      left: unset;
+      right: -15%;
+      top: 28%;
+    }
+  }
+  .wizard4 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    // height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 2rem;
+    .patch1 {
+      width: 20%;
+      height: 35%;
+      background-color: $patch1-color;
+      opacity: 0.2;
+      position: absolute;
+      border-radius: 3rem;
+      left: -12%;
+      top: 20%;
+      transform: rotate(20deg);
+    }
+    .patch2 {
+      width: 25%;
+      height: 60%;
+      background-color: $patch2-color;
+      position: absolute;
+      z-index: -1;
+      border-radius: 3rem;
+      transform: rotate(-40deg);
+      right: -19%;
+      bottom: -40%;
+    }
+    .patch3 {
+      width: 70px;
+      height: 70px;
+      background-color: $patch3-color;
+      opacity: 0.4;
+      position: absolute;
+      border-radius: 50%;
+      top: 60%;
+      left: 2%;
+      z-index: -1;
+    }
+    .patch4 {
+      width: 40px;
+      height: 40px;
+      background-color: $patch3-color;
+      opacity: 0.4;
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+      top: 50%;
+      right: 5%;
+    }
+    .patch5 {
+      width: 90px;
+      height: 90px;
+      background-color: $patch1-color;
+      opacity: 0.2;
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+      right: 20%;
+      bottom: -35%;
+    }
+    .WizardCon {
+      width: 100%;
+      .progress {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 5rem;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+        .ProgressDetail {
+          font-size: 14px;
+        }
+      }
+      .InfoCon {
+        margin: 0 15%;
+        .main-detail {
+          width: 50%;
+          margin-bottom: 2rem;
+          font-size: 14px;
+        }
+        .line {
+          color: $font-color;
+          background-color: $font-color;
+          height: 2px;
+          border: none;
+        }
+        .field {
+          margin: 2rem 0;
+          .upload-img {
+            border-radius: 50%;
+            width: 127px;
+            height: 127px;
+            margin-top: 1rem;
+            cursor: pointer;
+            object-fit: fill;
+          }
+          .label {
+            font-size: 15px;
+            .req {
+              color: red;
+            }
+            .detail {
+              font-size: 10px;
+              color: $font-color;
+            }
+          }
+          .demo {
+            font-size: 12px;
+            color: $font-color;
+            margin-bottom: 2rem;
+          }
+          .lname {
+            margin-left: 1rem;
+            width: 25%;
+          }
+          .fname {
+            width: 25%;
+          }
+          .icon {
+            font-size: 6rem;
+            color: $font-color;
+            margin: 1rem;
+          }
+          .textarea {
+            width: 100%;
+            height: 130px !important;
+            border-color: $font-color;
+            border-radius: 5px;
+            margin-top: 1rem;
+          }
+        }
+        .continue-btn {
+          background-color: $btn-color;
+          padding: 0.5rem 1.7rem;
+        }
+      }
+      @media (max-width: 900px) {
+        .progress {
+          flex-wrap: wrap;
+          margin: 0;
+          .ProgressCon {
+            margin: 1rem;
+          }
+        }
+        .InfoCon {
+          .main-detail {
+            width: unset;
+          }
+          .field {
+            .fname,
+            .lname {
+              width: 100%;
+              margin: 1rem 0;
+            }
+            .icon {
+              font-size: 5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .wizard5 {
+    padding-bottom: 2rem;
+    .patch1 {
+      width: 20%;
+      height: 35%;
+      background-color: $patch3-color;
+      opacity: 0.2;
+      position: absolute;
+      border-radius: 3rem;
+      left: -12%;
+      top: 70%;
+      transform: rotate(20deg);
+    }
+    .patch2 {
+      width: 90px;
+      height: 90px;
+      background-color: $patch1-color;
+      opacity: 0.2;
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+      top: 50%;
+      right: 15%;
+    }
+    .patch3 {
+      width: 25%;
+      height: 60%;
+      background-color: $patch1-color;
+      position: absolute;
+      opacity: 0.2;
+      z-index: -1;
+      border-radius: 3rem;
+      transform: rotate(-40deg);
+      top: unset;
+      left: unset;
+      right: -10%;
+      bottom: -60%;
+    }
+    .field {
+      .extra {
+        color: $font-color;
+        font-size: 15px;
+      }
+      .lanCon {
+        margin-top: 1rem;
+        background-color: $select-color;
+        border: 1px solid rgba($color: $heading-color, $alpha: 0.5);
+        border-radius: 1rem;
+        padding: 1rem;
+        span {
+          margin-bottom: 1rem;
+          .select1 {
+            margin-top: 1rem;
+            margin-right: 1rem;
+            width: 40%;
+          }
+        }
+      }
+      .select1 {
+        width: 25%;
+        height: 3rem;
+        border-radius: 5px;
+        border-color: $font-color;
+        color: $font-color;
+        background-color: $base-color;
+        font-size: 15px;
+        option {
+          color: black;
+        }
+      }
+      .Con {
+        display: flex;
+        align-items: center;
+        .select2 {
+          width: 30%;
+          height: 3rem;
+          border-radius: 5px;
+          border-color: $font-color;
+          color: $font-color;
+          background-color: $base-color;
+          font-size: 15px;
+          option {
+            color: black;
+          }
+        }
+        .select3 {
+          width: 30%;
+          height: 3rem;
+          border-radius: 5px;
+          border-color: $font-color;
+          color: $font-color;
+          background-color: $base-color;
+          font-size: 15px;
+          option {
+            color: black;
+          }
+        }
+        .skill {
+          width: 30%;
+          margin: 1rem;
+        }
+        .Skill {
+          width: 60%;
+        }
+        .experience {
+          width: 40%;
+        }
+        .first {
+          margin-left: 0;
+        }
+      }
+      .skillCon {
+        width: 70%;
+      }
+      .SkillCon {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+      .CerCon {
+        width: 70%;
+      }
+      .education {
+        width: 70%;
+      }
+      .title {
+        width: 100%;
+      }
+      .EduCon {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+      .link {
+        width: 50%;
+      }
+    }
+    .add-btn {
+      background-color: $patch1-color;
+      padding: 0.7rem 1.7rem;
+      margin-left: 1rem;
+    }
+    .edu-btn {
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 900px) {
+      .field {
+        .select1 {
+          width: 100%;
+          margin: 1rem;
+        }
+        .Con {
+          flex-wrap: wrap;
+          .select2 {
+            width: 100%;
+            margin: 1rem;
+          }
+          .select3 {
+            width: 100%;
+            margin: 1rem;
+          }
+          .skill {
+            width: 100%;
+          }
+          .Skill {
+            width: 100%;
+          }
+          .experience {
+            width: 100%;
+          }
+        }
+        .education {
+          width: 100%;
+        }
+        .skillCon {
+          width: 100%;
+        }
+        .link {
+          width: 100%;
+          margin: 1rem;
+        }
+      }
+      .add-btn {
+        margin: 1rem;
+      }
+    }
+  }
+  .wizard6 {
+    .patch1 {
+      width: 90px;
+      height: 90px;
+      background-color: $patch2-color;
+      opacity: 0.4;
+      position: absolute;
+      border-radius: 50%;
+      top: unset;
+      left: unset;
+      right: unset;
+      bottom: unset;
+      top: 30%;
+      left: 3%;
+      z-index: -1;
+    }
+    .patch2 {
+      width: 10%;
+      height: 25%;
+      background-color: $patch1-color;
+      opacity: 0.2;
+      position: absolute;
+      border-radius: 5px;
+      transform: rotate(35deg);
+      top: unset;
+      left: unset;
+      right: unset;
+      bottom: unset;
+      bottom: 5%;
+      left: -6%;
+      z-index: -1;
+    }
+    .patch3 {
+      width: 20%;
+      height: 40%;
+      background-color: $patch3-color;
+      position: absolute;
+      opacity: 0.2;
+      z-index: -1;
+      border-radius: 3rem;
+      transform: rotate(-60deg);
+      top: unset;
+      left: unset;
+      right: -8%;
+      bottom: 0;
+    }
+    .WizardCon {
+      .InfoCon {
+        .field {
+          .Con {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 2rem 0;
+            .connect-btn {
+              padding: 0.6rem 3rem;
+              color: black;
+              border-color: black;
+            }
+            @media (max-width: 400px) {
+              flex-direction: column;
+              .connect-btn {
+                margin: 1rem 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .wizard7 {
+    .patch1 {
+      width: 20%;
+      height: 40%;
+      background-color: $patch2-color;
+      position: absolute;
+      opacity: 0.6;
+      z-index: -1;
+      border-radius: 2rem;
+      transform: rotate(-45deg);
+      top: unset;
+      left: unset;
+      right: unset;
+      bottom: unset;
+      top: -25%;
+      right: 15%;
+    }
+    .patch2 {
+      width: 25%;
+      height: 35%;
+      background-color: $patch1-color;
+      opacity: 0.2;
+      position: absolute;
+      border-radius: 5px;
+      transform: rotate(-65deg);
+      border-radius: 3rem;
+      top: unset;
+      left: unset;
+      right: unset;
+      bottom: unset;
+      bottom: 15%;
+      left: -13%;
+    }
+    .Con {
+      .detail {
+        display: flex;
+        align-items: center;
+        div {
+          font-size: 15px;
+        }
+      }
+      .password,
+      .cpassword {
+        width: 42%;
+      }
+      @media (max-width: 450px) {
+        flex-direction: column;
+        .password,
+        .cpassword {
+          width: 100%;
+          margin: 1rem;
+        }
+      }
+    }
+    .continue-btn {
+      float: right;
+    }
+  }
+}
+.SignupTeacher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  flex-direction: column;
+  .mainHeading {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    .Logoimage {
+      width: 100px;
+    }
+  }
+  .line {
+    color: $font-color;
+    background-color: $font-color;
+    height: 2px;
+    border: none;
+    width: 100%;
+    position: absolute;
+    top: 8%;
+  }
+  .patch1 {
+    height: 25%;
+    width: 15%;
+    position: absolute;
+    z-index: -1;
+    background-color: $patch1-color;
+    border-radius: 2rem;
+    transform: rotate(20deg);
+    top: -10%;
+    left: -5%;
+  }
+  .patch2 {
+    height: 90%;
+    width: 55%;
+    position: absolute;
+    background-color: $btn-color;
+    border-radius: 2rem;
+    transform: rotate(18deg);
+    top: -10%;
+    right: -12%;
+    z-index: -1;
+  }
+  .patch3 {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: $patch3-color;
+    top: 7%;
+    left: 40%;
+    z-index: -1;
+  }
+  .patch4 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: $patch3-color;
+    top: 45%;
+    left: -2%;
+    z-index: -1;
+  }
+  .Form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px 2px rgba(175, 175, 175, 0.521);
+    margin: 1rem;
+    .Part1 {
+      background-color: $btn-color;
+      width: 50%;
+      color: $base-color;
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 78vh;
+      padding-left: 1rem;
+      h3 {
+        text-align: center;
+        margin: 0 3rem;
+      }
+      .detail {
+        font-size: 14px;
+        margin: 0 3rem;
+        .detail-link {
+          color: $base-color;
+        }
+      }
+    }
+    .Part2 {
+      width: 50%;
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 78vh;
+      padding-right: 1rem;
+      background-color: $base-color;
+      .Con {
+        border: 2px solid $font-color;
+        width: 80%;
+
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        text-align: center;
+        cursor: pointer;
+        .detail {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin: 0.7rem;
+          .Micon {
+            font-size: 25px;
+          }
+        }
+      }
+      .detail-link {
+        text-decoration: none;
+        margin: 2rem;
+        color: $btn-color;
+      }
+      .BtnCon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+        margin: 1rem 2rem;
+        .btn {
+          color: black;
+          padding: 1rem 1.5rem;
+          border-radius: 5px;
+          cursor: pointer;
+          border: none;
+          background-color: $base-color;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .Lbtn:hover {
+          background-color: $btn-color;
+          color: $base-color;
+        }
+        .Tbtn:hover {
+          background-color: $patch1-color;
+          color: $base-color;
+        }
+      }
+    }
+    @media (max-width: 650px) {
+      .Part1 {
+        h3 {
+          margin: 0 1rem;
+        }
+        .detail {
+          margin: 0 1rem;
+        }
+      }
+    }
+    @media (max-width: 550px) {
+      flex-direction: column;
+      margin-top: 110%;
+      .Part1 {
+        width: 90%;
+        height: 60vh;
+      }
+      .Part2 {
+        width: 90%;
+        height: unset;
+      }
+    }
+  }
+}
+.SignIn {
+  .BackgroundCon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color: $heading-color, $alpha: 0.3);
+    height: 100%;
+  }
+  .SignInForm {
+    background-color: $base-color;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 28%;
+    height: 75vh;
+    .BtnCon {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 60%;
+      margin: 1rem 2rem;
+      .btn {
+        color: black;
+        padding: 1rem 1.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        background-color: $base-color;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .Lbtn:disabled {
+        background-color: $btn-color;
+        color: $base-color;
+      }
+      .Tbtn:disabled {
+        background-color: $patch1-color;
+        color: $base-color;
+      }
+    }
+    .email,
+    .password {
+      width: 80%;
+    }
+    .btn1 {
+      width: 80%;
+      padding: 0;
+      font-size: 20px;
+      background-color: $btn-color;
+    }
+    .Fpassword {
+      text-decoration: none;
+      color: $btn-color;
+      font-weight: bold;
+    }
+    .btn3 {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      border: none;
+      background-color: $base-color;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      .Micon {
+        font-size: 25px;
+      }
+    }
+    .line2 {
+      background-color: $font-color;
+      height: 2px;
+      border: none;
+      color: $font-color;
+      width: 90%;
+    }
+    .btn2 {
+      background-color: $patch1-color;
+      padding: 1rem 0;
+      width: 60%;
+      font-size: 18px;
+      margin-bottom: 2rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 15px;
+      color: $base-color;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      width: 90%;
+      margin-top: 0;
+    }
+  }
+}
+.EmailVerify {
+  .SignInForm {
+    justify-content: flex-start;
+    width: 32%;
+    .email,
+    .password {
+      margin: 1rem 0;
+    }
+    .btn1 {
+      width: 70%;
+      margin-bottom: 2rem;
+      padding: 0.5rem;
+    }
+  }
+}

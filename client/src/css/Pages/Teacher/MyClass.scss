@@ -1,0 +1,314 @@
+$base-color: #ffffff;
+$btn-color: #5956e9;
+$patch1-color: #45dbc9;
+$patch2-color: #e5e5e5;
+$patch3-color: #ffdc60;
+$font-color: #c4c4c4;
+$select-color: #f5f7fb;
+$heading-color: #727e8f;
+$tag-color: #26247c;
+$star-color: #ffe202;
+//MyClassesCon
+.MyClassesCon {
+  position: relative;
+  overflow: hidden;
+  .patch1 {
+    position: absolute;
+    z-index: -1;
+    height: 65%;
+    width: 25%;
+    background-color: $heading-color;
+    opacity: 0.3;
+    transform: rotate(40deg);
+    border-radius: 1rem;
+    top: 20%;
+    left: -18%;
+  }
+  .patch2 {
+    position: absolute;
+    z-index: -1;
+    height: 65%;
+    width: 15%;
+    background-color: $patch1-color;
+    opacity: 0.3;
+    transform: rotate(60deg);
+    border-radius: 1rem;
+    top: -15%;
+    right: -12%;
+  }
+  .patch3 {
+    position: absolute;
+    z-index: -1;
+    height: 80px;
+    width: 80px;
+    background-color: $heading-color;
+    opacity: 0.3;
+    border-radius: 50%;
+    top: 70%;
+    right: 3%;
+  }
+  .patch4 {
+    position: absolute;
+    z-index: -1;
+    height: 80px;
+    width: 80px;
+    background-color: $patch3-color;
+    opacity: 0.3;
+    border-radius: 50%;
+    bottom: 0;
+    left: 25%;
+  }
+  .headerDiv {
+    margin: 2rem 5rem;
+    .heading {
+      font-size: 25px;
+      margin-bottom: 1rem;
+    }
+    .addClassBtn {
+      background-color: $patch1-color;
+      color: $base-color;
+      border-radius: 5px;
+      border: none;
+      padding: 0.8rem;
+      cursor: pointer;
+      .con {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        .BtnIcon {
+          font-size: 20px;
+          color: $base-color;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+  .tableContainer {
+    margin: 2rem 5rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    img {
+      width: 100px;
+      height: 67px;
+      border-radius: 20px;
+      margin: 0.5rem 0;
+      object-fit: cover;
+    }
+    .operationBtn {
+      background-color: $base-color;
+      border: none;
+      cursor: pointer;
+    }
+    .title {
+      color: $heading-color;
+      font-weight: bolder;
+      font-size: 16px;
+    }
+    .tableTop {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .select {
+        background-color: $select-color;
+        border: 1px solid $font-color;
+        width: 30%;
+        padding: 0.6rem 0.5rem;
+        font-size: 16px;
+        color: $heading-color;
+        cursor: pointer;
+      }
+    }
+    .row {
+      border-bottom: 1px solid rgba($color: $font-color, $alpha: 0.5);
+    }
+    .icon {
+      color: $heading-color;
+    }
+    .imgRow {
+      width: 10%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .OpenCon {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: $heading-color;
+    .con1,
+    .con2 {
+      width: 49%;
+    }
+    .con1 {
+      border: 2px solid rgba($color: $font-color, $alpha: 0.5);
+      border-top: none;
+      border-left: none;
+      .heading {
+        font-size: 16px;
+        color: $heading-color;
+        font-weight: bolder;
+      }
+      .row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 1rem;
+        .avatar {
+          margin-right: 1rem;
+        }
+        .ReviewContent {
+          .HeaderCon {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bolder;
+            .name {
+              margin-right: 1rem;
+            }
+            .rateCon {
+              display: flex;
+              align-items: center;
+              color: $star-color;
+              .icon {
+                color: $star-color;
+                margin-right: 0.5rem;
+              }
+            }
+          }
+          .review {
+            font-size: 13px;
+            margin-bottom: 0.5rem;
+          }
+          .date {
+            color: rgba($color: $heading-color, $alpha: 0.7);
+            font-size: 14px;
+            padding-bottom: 1rem;
+          }
+        }
+      }
+    }
+    .con2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .HeaderDiv,
+      .conPart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .Head {
+          font-size: 16px;
+          color: $heading-color;
+          font-weight: bolder;
+        }
+      }
+      .HeaderDiv {
+        width: 100%;
+        margin-bottom: 1rem;
+        .Select {
+          background-color: $select-color;
+          font-size: 16px;
+          border: 1px solid rgba($color: $font-color, $alpha: 0.5);
+          padding: 0.5rem;
+          color: $heading-color;
+        }
+      }
+      .centerRow {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .price {
+          font-size: 50px;
+          font-weight: bolder;
+          color: black;
+        }
+        .graph {
+          width: 85%;
+          height: 400px;
+        }
+      }
+      .Info {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        border: 1px solid rgba($color: $font-color, $alpha: 0.5);
+        border-radius: 0.5rem;
+        .Info1 {
+          width: 40%;
+          padding: 1rem 0;
+          color: $patch1-color;
+          .head {
+            font-size: 20px;
+          }
+          .value {
+            font-size: 50px;
+            font-weight: bolder;
+          }
+          .css-5xe99f-MuiLinearProgress-bar1 {
+            background-color: $patch1-color;
+          }
+        }
+        .Info2 {
+          border-right: 1px solid rgba($color: $font-color, $alpha: 0.5);
+          padding-right: 1rem;
+          color: $btn-color;
+          .css-5xe99f-MuiLinearProgress-bar1 {
+            background-color: $btn-color;
+          }
+        }
+        .MuiLinearProgress-colorPrimary {
+          background-color: $patch2-color !important;
+        }
+      }
+      .row1 {
+        padding: 1rem 3rem;
+        width: 90%;
+        .header {
+          font-size: 16px;
+          font-weight: bolder;
+        }
+        .detail {
+          margin: 1rem 0;
+          .allCon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+        .Detail {
+          width: 80%;
+        }
+      }
+    }
+  }
+  @media (max-width: 850px) {
+    .OpenCon {
+      .con2 {
+        .centerRow {
+          .price {
+            font-size: 30px;
+          }
+        }
+        .Info {
+          .Info1 {
+            .value {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 550px) {
+    .tableContainer,
+    .headerDiv {
+      margin: 1rem 2rem;
+    }
+  }
+}

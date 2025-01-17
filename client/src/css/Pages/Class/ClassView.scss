@@ -1,0 +1,1129 @@
+$base-color: #ffffff;
+$btn-color: #5956e9;
+$patch1-color: #45dbc9;
+$patch2-color: #e5e5e5;
+$patch3-color: #ffdc60;
+$font-color: #c4c4c4;
+$select-color: #f5f7fb;
+$heading-color: #727e8f;
+$tag-color: #26247c;
+$star-color: #f8b129;
+$close-color: #ffe202;
+.ClassView {
+  width: 100%;
+  .eachClassNav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+    .tabs {
+      margin-left: 3rem;
+      width: 65%;
+      .tab {
+        font-weight: bold;
+        color: $heading-color;
+        width: unset;
+        padding: 1rem 2rem;
+      }
+    }
+    .btnCon {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .btn {
+        background-color: $base-color;
+        border: 1px solid $font-color;
+        color: $heading-color;
+        padding: 0.5rem;
+        margin: 0.2rem;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+  .mainContent {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    .changingTab {
+      width: 70%;
+    }
+    .sideSummary {
+      width: 38%;
+    }
+  }
+}
+
+.classOverview {
+  .teacherInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    margin-left: 6rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    .con {
+      border-right: 1px solid $font-color;
+      // width: 40%;
+      padding-right: 1rem;
+      display: flex;
+      align-items: center;
+    }
+    .ratingCon {
+      justify-content: space-around;
+    }
+    .teacherDetail {
+      .avatar {
+        margin-right: 1rem;
+      }
+    }
+    .span {
+      color: $heading-color;
+    }
+  }
+  .description {
+    margin-left: 6rem;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .imgSlider {
+    height: 500px;
+    margin-bottom: 1rem;
+    .classViewStepperImg {
+      width: 80%;
+      margin: auto;
+      height: 90%;
+      display: block;
+      .Bigimg {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+      }
+      .imgPreviews {
+        width: 100%;
+        height: 30%;
+        img {
+          width: 20%;
+          height: 80%;
+          margin: 1rem;
+        }
+        .activeimgpreview {
+          filter: opacity(0.6);
+        }
+      }
+    }
+  }
+  .MuiMobileStepper-root {
+    background: none;
+    position: relative;
+    width: 90%;
+    top: 150px;
+    margin: auto;
+    z-index: 0;
+  }
+
+  .OverviewSwipperBtn {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    min-width: auto;
+  }
+  .aboutCon {
+    margin: 3rem 0;
+    margin-left: 6rem;
+    .detail {
+      color: $heading-color;
+      font-size: 15px;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.ClassSummary {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  .headerBtns {
+    button {
+      background: white;
+      width: 50%;
+      height: 70px;
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .b1 {
+      border-top-left-radius: 16px;
+      &:disabled {
+        background-color: $btn-color;
+        border: none;
+        border: 4px solid $btn-color;
+        border-bottom-color: $patch1-color;
+        color: white;
+      }
+    }
+    .b2 {
+      border-top-right-radius: 16px;
+      &:disabled {
+        background-color: $patch1-color;
+        border: none;
+        border: 4px solid $patch1-color;
+        border-bottom-color: $btn-color;
+        color: white;
+      }
+    }
+  }
+  .summaryContent {
+    .content {
+      margin: 1rem;
+      .heading {
+        font-weight: bold !important;
+      }
+      .detailCon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 15px;
+        margin: 0.5rem 0;
+        margin-bottom: 3rem;
+        .val {
+          span {
+            color: $heading-color;
+          }
+        }
+      }
+      .con1 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        font-size: 14px;
+        .icon {
+          font-size: 18px;
+          margin-right: 1rem;
+        }
+      }
+      .con2 {
+        .label {
+          color: $heading-color;
+        }
+      }
+      .con3 {
+        .label {
+          color: $font-color;
+        }
+      }
+      .con4 {
+        .label {
+          color: hotpink;
+        }
+      }
+      .priceBtn,
+      .askBtn {
+        width: 100%;
+        padding: 0.7rem 0;
+        border-radius: 5px;
+        background-color: $patch1-color;
+        color: $base-color;
+        border: none;
+        font-size: 18px;
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+      }
+      .priceBtn {
+        margin-top: 2rem;
+      }
+      .askBtn {
+        background-color: $base-color;
+        color: $tag-color;
+        font-weight: bold;
+      }
+      .Div {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        .maxCon {
+          font-size: 13px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.description {
+  .content {
+    width: 80%;
+    margin-left: 4rem;
+    font-size: 14px;
+    color: $heading-color;
+    .Con {
+      margin: 1rem 0;
+      .heading {
+        color: black;
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+.About {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  .content {
+    margin-left: 4rem;
+    width: 85%;
+    .heading {
+      font-size: 18px;
+    }
+    .InfoCon {
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+      .avatar {
+        margin-right: 2rem;
+      }
+      .detailCon {
+        font-size: 18px;
+        .ratingCon {
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          margin: 0.8rem 0;
+          .val {
+            span {
+              color: $heading-color;
+            }
+          }
+        }
+        .CBtn {
+          border: 1px solid $heading-color;
+          background-color: $base-color;
+          color: $heading-color;
+          font-size: 16px;
+          border-radius: 5px;
+          padding: 0.5rem 2rem;
+          margin-top: 0.5rem;
+          cursor: pointer;
+        }
+      }
+    }
+    .Con2 {
+      border: 1px solid rgba(114, 126, 143, 0.4);
+      width: 95%;
+      // border-radius: 5px;
+      padding: 1rem;
+      .Con {
+        border-bottom: 1px solid $heading-color;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        .con1 {
+          display: flex;
+          align-items: flex-start;
+          width: 100%;
+          margin-bottom: 2rem;
+          .InnerCon {
+            width: 50%;
+            .header {
+              font-size: 15px;
+              color: $heading-color;
+              margin-bottom: 0.5rem;
+            }
+          }
+        }
+      }
+      .description {
+        color: $heading-color;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.classReview {
+  margin-left: 4rem;
+  width: 85%;
+  margin-bottom: 3rem;
+  .recommand {
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border: 1px solid rgba($color: $font-color, $alpha: 0.2);
+    .recommendedHeader {
+      margin: 0 2rem;
+      margin-top: 2rem;
+    }
+    .recommendedSwipper {
+      margin: auto;
+      div {
+        .MuiMobileStepper-root {
+          position: relative;
+          top: 190px;
+          background: transparent;
+          .OverviewSwipperBtn {
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            min-width: auto;
+          }
+        }
+        .RecommendedStepperImg {
+          width: 80%;
+          margin: auto;
+          background-color: #f5f5f5;
+          .reviewCard {
+            width: 40%;
+            .card-img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .Rating {
+    margin: 2rem 0;
+    .summerizedDetails {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      .lineReviews {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        font-size: 15px;
+        .rate {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.2rem 0;
+          color: $font-color;
+          .line {
+            width: 70%;
+            border: none;
+            height: 5px;
+            background-color: $font-color;
+            border-radius: 5px;
+          }
+        }
+        .first {
+          color: $patch1-color;
+          .line {
+            background-color: $star-color;
+          }
+        }
+        .rates {
+          color: black;
+          font-size: 17px;
+        }
+      }
+      .sortRating {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        font-size: 15px;
+        .ratingSortSelect {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 15px;
+          .select {
+            padding: 0.5rem 0.5rem;
+            background-color: $base-color;
+            font-size: 15px;
+            color: $heading-color;
+            border-radius: 5px;
+            border: 1px solid $heading-color;
+          }
+        }
+        .detail {
+          margin: 0.2rem 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: $font-color;
+          .icon {
+            color: $star-color;
+          }
+        }
+        .firstDetail {
+          color: black;
+        }
+      }
+    }
+    .reviews {
+      display: flex;
+      flex-direction: column;
+      .eachReview {
+        display: block;
+        padding: 2rem 0;
+        border-bottom: 1px solid $font-color;
+        .detailCon {
+          display: flex;
+          align-items: center;
+          margin: 0.5rem 0;
+          .avatar {
+            margin-right: 1rem;
+          }
+          .nameCon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 40%;
+            .icon {
+              color: $star-color;
+            }
+          }
+        }
+        .description,
+        .time {
+          color: $heading-color;
+          font-size: 14px;
+          margin-left: 3rem;
+        }
+        .time {
+          margin: 1rem 0;
+          margin-left: 3rem;
+        }
+        .Like {
+          margin-left: 3rem;
+          display: flex;
+          align-items: center;
+          // width: 100%;
+          justify-content: space-around;
+          .likeCon {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .searchCon {
+    border: 1ps solid $heading-color !important;
+    background-color: rgba($color: $font-color, $alpha: 0.2);
+    width: 165%;
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: 2px 2px 2px rgba(148, 148, 148, 0.3);
+    .RecommendedStepperImg {
+      .reviewCard {
+        width: 20%;
+      }
+    }
+  }
+  .peopleCon {
+    width: 165%;
+    .RecommendedStepperImg {
+      .reviewCard {
+        width: 20%;
+      }
+    }
+  }
+}
+
+.compareContent {
+  margin: 2rem;
+  margin-left: 4rem;
+  width: 85%;
+  .heading {
+    font-size: 18px;
+  }
+  .CompareGrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    // grid-template-rows: 0fr 1fr 1fr 1fr;
+    column-gap: 1px;
+    background-color: $font-color;
+    border: 1px solid $font-color;
+    padding: 0px;
+    margin-top: 1rem;
+    // border-radius: 5px;
+    color: $heading-color;
+    .gridItem {
+      padding: 1rem;
+      font-size: 15px;
+      background-color: $base-color;
+      button {
+        padding: 1rem 0;
+        border-radius: 5px;
+        width: 100%;
+        color: $base-color;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .btn1 {
+        background-color: $btn-color;
+      }
+      .btn2 {
+        background-color: $patch1-color;
+      }
+    }
+    .gridrow2 {
+      background: #f5f5f5;
+    }
+    .center {
+      text-align: center;
+    }
+    .black {
+      color: black;
+      font-weight: bold;
+    }
+  }
+}
+
+.signupStudentModal {
+  .label {
+    width: 96%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // background-color: $close-color;
+    padding: 1rem;
+    color: black;
+    font-weight: bolder;
+    .closeBtn {
+      // background-color: $close-color;
+      border: none;
+      font-size: 18px;
+      font-weight: bolder;
+      cursor: pointer;
+    }
+  }
+  .content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .Con1 {
+      width: 25%;
+      font-size: 15px;
+      .InfoCon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid $font-color;
+        div {
+          margin: 0.2rem 0;
+        }
+        .status {
+          color: $patch1-color;
+        }
+      }
+      .detailCon {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 1rem 0;
+        color: $heading-color;
+        .header {
+          color: black;
+          font-size: 17px;
+          margin-bottom: 0.5rem;
+        }
+        .option {
+          margin: 0.2rem 0;
+        }
+      }
+    }
+    .Con2 {
+      width: 70%;
+      font-size: 15px;
+      .extraDetail {
+        color: $heading-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem 0;
+        width: 100%;
+        flex-wrap: wrap;
+      }
+      .dataCon {
+        border: 1px solid $font-color;
+        border-radius: 5px;
+        .textarea {
+          width: 99%;
+          border-radius: 5px;
+          height: 35vh;
+          border: none;
+        }
+        .uploadBtn {
+          width: 100%;
+          background-color: $base-color;
+          color: black;
+          border: 1px solid $font-color;
+          // padding: 0.5rem 0;
+          text-align: right;
+          font-size: 25px;
+        }
+      }
+      .Container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 0.5rem;
+        .sendBtn {
+          font-size: 18px;
+          color: $base-color;
+          background-color: $patch1-color;
+          border-radius: 5px;
+          border: none;
+          padding: 0.5rem 2rem;
+          cursor: pointer;
+        }
+        // .modal{
+        //     .link{
+        //         text-decoration: none;
+        //     }
+        // }
+      }
+    }
+  }
+}
+
+.addReview {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  .patch1 {
+    width: 20%;
+    position: absolute;
+    z-index: -1;
+    height: 35%;
+    background-color: $patch1-color;
+    opacity: 0.2;
+    transform: rotate(15deg);
+    border-radius: 2rem;
+    left: -10%;
+  }
+  .patch2 {
+    width: 20%;
+    position: absolute;
+    z-index: -1;
+    height: 45%;
+    background-color: $heading-color;
+    opacity: 0.2;
+    transform: rotate(38deg);
+    border-radius: 2rem;
+    right: -10%;
+    bottom: -15%;
+  }
+  .patch3 {
+    width: 60px;
+    position: absolute;
+    z-index: -1;
+    height: 60px;
+    background-color: $patch3-color;
+    opacity: 0.3;
+    border-radius: 50%;
+    top: 73%;
+    left: 5%;
+  }
+  .patch4 {
+    width: 50px;
+    position: absolute;
+    z-index: -1;
+    height: 50px;
+    background-color: $patch1-color;
+    opacity: 0.2;
+    border-radius: 50%;
+    bottom: 8%;
+    left: 25%;
+  }
+  .patch5 {
+    width: 30px;
+    position: absolute;
+    z-index: -1;
+    height: 30px;
+    background-color: $patch3-color;
+    opacity: 0.3;
+    border-radius: 50%;
+    top: 40%;
+    right: 10%;
+  }
+  .heading {
+    font-size: 35px;
+    margin-bottom: 1rem;
+  }
+  .ratingsStar {
+    .rating {
+      font-size: 60px;
+    }
+  }
+  .ratingMsg {
+    .label {
+      margin: 1rem 0;
+    }
+    .textarea {
+      width: 100%;
+    }
+  }
+  .publishBtn {
+    background-color: $btn-color;
+    color: $base-color;
+    border: none;
+    padding: 0.5rem 0;
+    width: 20%;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 2rem;
+    cursor: pointer;
+  }
+}
+
+.ThanksCon {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  .patch1 {
+    width: 20%;
+    position: absolute;
+    z-index: -1;
+    height: 35%;
+    background-color: $patch1-color;
+    opacity: 0.2;
+    transform: rotate(15deg);
+    border-radius: 2rem;
+    left: -10%;
+  }
+  .patch2 {
+    width: 20%;
+    position: absolute;
+    z-index: -1;
+    height: 45%;
+    background-color: $heading-color;
+    opacity: 0.2;
+    transform: rotate(38deg);
+    border-radius: 2rem;
+    right: -10%;
+    bottom: -15%;
+  }
+  .patch3 {
+    width: 60px;
+    position: absolute;
+    z-index: -1;
+    height: 60px;
+    background-color: $patch3-color;
+    opacity: 0.3;
+    border-radius: 50%;
+    top: 73%;
+    left: 5%;
+  }
+  .patch4 {
+    width: 50px;
+    position: absolute;
+    z-index: -1;
+    height: 50px;
+    background-color: $patch1-color;
+    opacity: 0.2;
+    border-radius: 50%;
+    bottom: 8%;
+    left: 25%;
+  }
+  .patch5 {
+    width: 30px;
+    position: absolute;
+    z-index: -1;
+    height: 30px;
+    background-color: $patch3-color;
+    opacity: 0.3;
+    border-radius: 50%;
+    top: 40%;
+    right: 10%;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .heading {
+      font-size: 35px;
+      margin-bottom: 1rem;
+    }
+    .doneBtn {
+      padding: 0.5rem 0;
+      font-size: 18px;
+      width: 30%;
+      background-color: $patch1-color;
+      color: $base-color;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.PaymentSuccess {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  .patch1 {
+    width: 20%;
+    height: 30%;
+    border-radius: 2rem;
+    background-color: rgba($color: $patch1-color, $alpha: 0.2);
+    position: absolute;
+    transform: rotate(20deg);
+    left: -9%;
+    top: 25%;
+  }
+  .patch2 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba($color: $patch3-color, $alpha: 0.2);
+    position: absolute;
+    left: 9%;
+    top: 60%;
+  }
+  .patch3 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba($color: $patch1-color, $alpha: 0.2);
+    position: absolute;
+    left: 20%;
+    top: 80%;
+  }
+  .patch4 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba($color: $patch3-color, $alpha: 0.2);
+    position: absolute;
+    right: 10%;
+    top: 45%;
+  }
+  .patch5 {
+    width: 20%;
+    height: 30%;
+    border-radius: 2rem;
+    background-color: rgba($color: $heading-color, $alpha: 0.1);
+    position: absolute;
+    transform: rotate(40deg);
+    right: -11%;
+    top: 55%;
+  }
+  .PaymentContent {
+    width: 100%;
+    margin: 7rem 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .MainHeading {
+      font-size: 35px;
+      text-align: center;
+    }
+    .Detail {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .newBtn {
+      background-color: $patch1-color;
+      color: $base-color;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .ClassView {
+    .tabs {
+      width: 50%;
+    }
+    .btnCon {
+      width: 50%;
+    }
+  }
+  .classOverview {
+    .teacherInfo {
+      margin-left: 4rem;
+      width: 90%;
+    }
+    .description {
+      margin-left: 4rem;
+    }
+    .aboutCon {
+      margin-left: 4rem;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .ClassView {
+    .mainContent {
+      flex-direction: column;
+      .changingTab {
+        width: 100%;
+      }
+      .sideSummary {
+        width: 100%;
+        margin: 2rem 1rem;
+      }
+    }
+  }
+  .classReview {
+    .searchCon,
+    .peopleCon {
+      width: 100%;
+      .RecommendedStepperImg {
+        .reviewCard {
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 750px) {
+  .ClassView {
+    .eachClassNav {
+      flex-direction: column;
+      .tabs {
+        width: 100%;
+        .tab {
+          width: 10%;
+        }
+      }
+      .btnCon {
+        width: 100%;
+      }
+    }
+  }
+  .classReview {
+    .searchCon,
+    .peopleCon {
+      .RecommendedStepperImg {
+        .reviewCard {
+          width: 40%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
+  .ClassView {
+    .eachClassNav {
+      flex-direction: column;
+      .tabs {
+        width: 100%;
+      }
+    }
+  }
+  .classOverview {
+    .teacherInfo {
+      margin-left: 3rem;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      .con {
+        border-right: none;
+      }
+    }
+    .description {
+      margin-left: 3rem;
+      font-size: 25px;
+    }
+    .aboutCon {
+      margin-left: 3rem;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .classReview {
+    .Rating {
+      .summerizedDetails {
+        flex-direction: column;
+        .lineReviews,
+        .sortRating {
+          width: 100%;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 550px) {
+  .classReview
+    .recommand
+    .recommendedSwipper
+    div
+    .RecommendedStepperImg
+    .reviewCard {
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .About {
+    .content {
+      margin-left: 2rem;
+    }
+  }
+  .compareContent {
+    margin-left: 2rem;
+    width: 90%;
+  }
+}
+@media (max-width: 400px) {
+  .description {
+    .content {
+      .Con {
+        margin-left: 2rem;
+      }
+    }
+  }
+  .classReview {
+    .searchCon,
+    .peopleCon {
+      width: 80%;
+      .RecommendedStepperImg {
+        .reviewCard {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .addReview {
+    .heading {
+      font-size: 25px;
+      margin-bottom: 0.5rem;
+    }
+    .ratingsStar {
+      .rating {
+        font-size: 40px;
+      }
+    }
+    .ratingMsg {
+      .textarea {
+        width: 90%;
+      }
+    }
+    .publishBtn {
+      font-size: 15px;
+      width: 80%;
+    }
+  }
+}

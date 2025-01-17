@@ -1,0 +1,1042 @@
+$base-color: #ffffff;
+$btn-color: #5956e9;
+$patch1-color: #45dbc9;
+$patch2-color: #e5e5e5;
+$patch3-color: #ffdc60;
+$font-color: #c4c4c4;
+$select-color: #f5f7fb;
+$heading-color: #727e8f;
+.createClassCon {
+  width: 100%;
+  // height: 100vh;
+  .wizard1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    .patch1 {
+      width: 80px;
+      height: 80px;
+      background-color: $patch3-color;
+      position: absolute;
+      z-index: -1;
+      opacity: 0.3;
+      border-radius: 50%;
+      right: -3%;
+      top: 25%;
+    }
+    .patch2 {
+      width: 25%;
+      height: 60%;
+      background-color: $patch2-color;
+      position: absolute;
+      z-index: -1;
+      border-radius: 3rem;
+      transform: rotate(50deg);
+      left: -20%;
+      top: 40%;
+    }
+    .patch3 {
+      width: 60px;
+      height: 60px;
+      background-color: $heading-color;
+      position: absolute;
+      z-index: -1;
+      opacity: 0.5;
+      border-radius: 50%;
+      bottom: 12%;
+      left: 63%;
+    }
+    .patch4 {
+      width: 80px;
+      height: 80px;
+      background-color: $patch1-color;
+      position: absolute;
+      z-index: -1;
+      opacity: 0.3;
+      border-radius: 50%;
+      bottom: -5%;
+      left: 55%;
+    }
+    .Con1 {
+      width: 57%;
+      margin: 2rem;
+      .field {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem;
+        div {
+          width: 100%;
+        }
+        .selectCon {
+          margin-left: 1rem;
+        }
+        .input {
+          width: 86%;
+        }
+      }
+      .note {
+        text-align: center;
+        .detail {
+          color: red;
+          font-size: 13px;
+          span {
+            color: $heading-color;
+          }
+        }
+      }
+    }
+    .Con2 {
+      width: 30%;
+      margin-top: 3rem;
+      margin-right: 1.5rem;
+      border: 1px solid $heading-color;
+      border-radius: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 1rem;
+      .heading {
+        text-align: left;
+        width: 100%;
+      }
+      .detail {
+        font-size: 15px;
+        color: $heading-color;
+      }
+      img {
+        width: 70%;
+        border-radius: 1rem;
+      }
+    }
+    @media (max-width: 780px) {
+      .Con1 {
+        width: 65%;
+        .field {
+          .input {
+            width: 75%;
+          }
+        }
+      }
+      .Con2 {
+        width: 25%;
+      }
+    }
+    @media (max-width: 700px) {
+      flex-direction: column;
+      overflow-y: scroll;
+      height: unset;
+      .Con1 {
+        width: 90%;
+        margin: 1rem;
+        .field {
+          .selectCon {
+            .select {
+              margin-bottom: 1rem;
+            }
+          }
+          .input {
+            width: 85%;
+          }
+          .saveBtn,
+          .cancelBtn {
+            padding: 0.5rem 1rem;
+          }
+        }
+      }
+      .Con2 {
+        width: 90%;
+        margin: 1rem;
+      }
+    }
+    @media (max-width: 500px) {
+      .Con1 {
+        width: 90%;
+        margin: 1rem;
+        .field {
+          flex-direction: column;
+          .input {
+            width: 100%;
+          }
+          .saveBtn,
+          .cancelBtn {
+            padding: 0.5rem 1rem;
+          }
+        }
+      }
+      .Con2 {
+        width: 80%;
+        margin: 1rem;
+      }
+    }
+  }
+  .cancelBtn {
+    border: 1px solid $font-color;
+    color: $heading-color;
+    padding: 0.6rem 2rem;
+    margin-top: 1rem;
+  }
+  .saveBtn {
+    border: none;
+    background-color: $btn-color;
+    padding: 0.6rem 2rem;
+    color: $base-color;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  .wizard2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+    .patch1 {
+      position: absolute;
+      z-index: -1;
+      width: 21%;
+      height: 40%;
+      transform: rotate(50deg);
+      border-radius: 3rem;
+      background-color: $font-color;
+      opacity: 0.6;
+      top: 45%;
+      left: -17%;
+    }
+    .Con {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin: 1rem;
+      width: 65%;
+      margin-left: 10%;
+      .Mainheading {
+        padding: 1rem 0;
+        font-size: 18px;
+        border-bottom: 2px solid $font-color;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      .table {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba($color: #c4c4c4, $alpha: 0.4);
+        .row {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          .border {
+            border: 1px solid rgb(182, 182, 182);
+          }
+          .col1,
+          .col5 {
+            width: 100%;
+            text-align: center;
+            padding: 1.1rem 0;
+          }
+          .col5 {
+            padding: 1rem 0;
+          }
+          .col4,
+          .col3,
+          .Detail,
+          .detail,
+          .price {
+            background-color: $base-color;
+            padding: 1rem 0;
+            width: 100%;
+            text-align: center;
+          }
+          .Detail {
+            padding: 1.1rem 0;
+          }
+          .detail {
+            padding: 0.27rem 0;
+          }
+          .selectCon {
+            display: flex;
+            width: 100%;
+            .select {
+              background-color: $base-color;
+            }
+          }
+          .ProgressCon {
+            padding: 1rem 0;
+            width: 100%;
+            background-color: $base-color;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            .detail2 {
+              font-size: 13px;
+            }
+            .range {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              font-size: 13px;
+              width: 80%;
+            }
+          }
+          .col2 {
+            background-color: $base-color;
+            padding: 2rem 0;
+          }
+        }
+        .row2 {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          .col1 {
+            width: 100%;
+          }
+          .input {
+            width: 100%;
+            background-color: $base-color;
+          }
+          .select {
+            background-color: $base-color;
+          }
+
+          .MuiOutlinedInput-root {
+            border-radius: 0 !important;
+          }
+        }
+      }
+      .heading2 {
+        font-weight: bolder;
+        padding: 1rem 0;
+      }
+      .table2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba($color: #c4c4c4, $alpha: 0.4);
+        .row1 {
+          background-color: $base-color;
+          padding: 0.5rem 1.5rem;
+          border: 1px solid rgb(182, 182, 182);
+        }
+        .row2 {
+          border: 1px solid rgb(182, 182, 182);
+          .row {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 0.5rem 0.5rem;
+
+            .col {
+              width: 15%;
+            }
+            .detail {
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              width: 100%;
+              .input {
+                background-color: $base-color;
+              }
+              .selectCon {
+                width: 20%;
+                .MuiOutlinedInput-notchedOutline {
+                  border-radius: 0 !important;
+                }
+                .MuiSelect-select {
+                  border-radius: 0 !important;
+                }
+                .select {
+                  background-color: $base-color;
+                }
+              }
+            }
+          }
+        }
+        .row3 {
+          color: $patch1-color;
+          font-size: 15px;
+          font-weight: bolder;
+        }
+      }
+      .termCon {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: 1rem 0;
+        .termData {
+          width: 60%;
+          .detail {
+            color: $heading-color;
+            margin-top: 0.5rem;
+            font-size: 15px;
+          }
+        }
+        .check {
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+        }
+      }
+      .BtnCon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+    // .Con2{
+    //     width: 20%;
+    //     background-color: rgba($color: #C4C4C4, $alpha: 0.4);
+    //     display: flex;
+    //     align-items: center;
+    //     flex-direction: column;
+    //     justify-content: space-around;
+    //     padding: 2rem;
+    //     margin-top: 5%;
+    //     margin-left: 2rem;
+    //     border-radius: 5px;
+    //     .image{
+    //         margin: 1rem;
+    //     }
+    //     .detail{
+    //         font-size: 13px;
+    //         text-align: center;
+    //         width: 100%;
+    //     }
+    // }
+    @media (max-width: 1105px) {
+      .Con {
+        width: 70%;
+      }
+      .Con2 {
+        width: 15%;
+      }
+    }
+    @media (max-width: 730px) {
+      flex-direction: column;
+      overflow: scroll;
+      .Con {
+        width: 600px;
+        .table {
+          .row {
+            .col3,
+            .col4,
+            .col1 {
+              font-size: 13px;
+              padding: 1.1rem 0;
+            }
+            .col2 {
+              padding: 2rem 0;
+            }
+          }
+        }
+        .table2 {
+          .row2 {
+            font-size: 13px;
+            .row {
+              flex-direction: column;
+              align-items: flex-start;
+            }
+          }
+        }
+      }
+      .Con2 {
+        width: 100%;
+        padding: 2rem 3rem;
+        margin: 1rem;
+      }
+    }
+  }
+  .wizard3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    .patch1 {
+      position: absolute;
+      z-index: -1;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background-color: $patch1-color;
+      opacity: 0.3;
+      top: 45%;
+      left: -1%;
+    }
+    .patch2 {
+      position: absolute;
+      z-index: -1;
+      width: 21%;
+      height: 40%;
+      transform: rotate(50deg);
+      border-radius: 2rem;
+      background-color: $font-color;
+      opacity: 0.6;
+      top: 45%;
+      right: -12%;
+    }
+    .Con1 {
+      width: 60%;
+      .heading {
+        padding: 1rem 0;
+        font-size: 18px;
+        border-bottom: 2px solid $font-color;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      .heading2 {
+        margin-bottom: 0.5rem;
+        font-size: 18px;
+      }
+      .detail,
+      .detail1 {
+        font-size: 15px;
+        color: $heading-color;
+      }
+      .content {
+        border: 1px solid $heading-color;
+        border-radius: 0.5rem;
+        background-color: rgba($color: #c4c4c4, $alpha: 0.4);
+        height: 60vh;
+        margin-top: 1rem;
+        .input {
+          width: 90%;
+          margin: 2rem;
+          background-color: $base-color;
+        }
+      }
+      .BtnCon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+    .Con2 {
+      width: 20%;
+      background-color: rgba($color: #c4c4c4, $alpha: 0.4);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 2rem;
+      margin-top: 5%;
+      margin-left: 2rem;
+      border-radius: 5px;
+      .image {
+        margin: 1rem;
+      }
+      .detail {
+        font-size: 13px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    @media (max-width: 750px) {
+      .Con1 {
+        .content {
+          .input {
+            width: 85%;
+          }
+        }
+      }
+    }
+    @media (max-width: 500px) {
+      flex-direction: column;
+      overflow-y: scroll;
+      height: unset;
+      .Con1 {
+        width: 90%;
+        margin: 1rem;
+        .content {
+          .input {
+            width: 85%;
+          }
+        }
+      }
+      .Con2 {
+        width: 90%;
+        margin: 1rem;
+        padding: 2rem 0;
+      }
+    }
+  }
+  .wizard4 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    margin-bottom: 2rem;
+    .patch1 {
+      position: absolute;
+      z-index: -1;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background-color: $patch1-color;
+      opacity: 0.3;
+      top: 45%;
+      left: -1%;
+    }
+    .patch2 {
+      position: absolute;
+      z-index: -1;
+      width: 21%;
+      height: 40%;
+      transform: rotate(50deg);
+      border-radius: 2rem;
+      background-color: $font-color;
+      opacity: 0.6;
+      top: 45%;
+      right: -12%;
+    }
+    .Con1 {
+      width: 60%;
+      margin-left: 10%;
+      .Mainheading {
+        padding: 1rem 0;
+        font-size: 18px;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      .InnerCon {
+        border: 1px solid $heading-color;
+        border-radius: 5px;
+        padding: 1rem;
+        .heading {
+          margin-bottom: 0.5rem;
+          font-size: 18px;
+        }
+        .detail1,
+        .detail2 {
+          font-size: 13px;
+          color: $heading-color;
+        }
+        .divider {
+          margin: 1rem 0;
+        }
+        .content {
+          border: 1px solid $heading-color;
+          background-color: rgba($color: #c4c4c4, $alpha: 0.4);
+          margin: 1rem;
+          .con {
+            display: flex;
+            align-items: center;
+            width: 95%;
+            justify-content: space-between;
+            padding: 0 1rem;
+          }
+          .input {
+            width: 95%;
+            margin: 2rem 1rem;
+            background-color: $base-color;
+          }
+          .selectCon {
+            display: flex;
+            width: 95%;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 1rem;
+            padding-bottom: 1rem;
+            .select {
+              padding: 1rem 2rem;
+              background-color: $base-color;
+            }
+            .addCon {
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              width: 40%;
+              .CBtn {
+                border-color: $heading-color;
+                color: $heading-color;
+                background-color: $base-color;
+                padding: 0.5rem 2rem;
+              }
+              .addBtn {
+                background-color: $patch1-color;
+                color: $base-color;
+                padding: 0.5rem 3rem;
+              }
+            }
+            @media (max-width: 1200px) {
+              .select {
+                padding: 1rem;
+              }
+              .addCon {
+                width: 50%;
+              }
+            }
+            @media (max-width: 1200px) {
+              .select {
+                padding: 0.5rem 0;
+              }
+              .addCon {
+                width: 50%;
+                .CBtn {
+                  padding: 0.5rem 1rem;
+                }
+                .addBtn {
+                  padding: 0.5rem 2rem;
+                }
+              }
+            }
+            @media (max-width: 800px) {
+              flex-wrap: wrap;
+              .select {
+                padding: 0.5rem 2rem;
+              }
+              .addCon {
+                width: 100%;
+                margin-top: 1rem;
+                .CBtn {
+                  padding: 0.5rem 2rem;
+                }
+                .addBtn {
+                  padding: 0.5rem 2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      .BtnCon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+    .Con2 {
+      width: 20%;
+      background-color: rgba($color: #c4c4c4, $alpha: 0.4);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 2rem;
+      margin-top: 5%;
+      margin-left: 2rem;
+      border-radius: 5px;
+      .image {
+        margin: 1rem;
+      }
+      .detail {
+        font-size: 13px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    @media (max-width: 550px) {
+      flex-direction: column;
+      .Con1 {
+        width: 90%;
+        margin: 1rem;
+        .InnerCon {
+          .content {
+            .input {
+              width: 90%;
+            }
+          }
+        }
+      }
+      .Con2 {
+        width: 90%;
+        margin: 1rem;
+        padding: 2rem 0;
+      }
+    }
+    @media (max-width: 400px) {
+      flex-direction: column;
+      .Con1 {
+        .BtnCon {
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+    }
+    @media (max-width: 350px) {
+      flex-direction: column;
+      .Con1 {
+        width: 90%;
+        margin: 1rem;
+        .InnerCon {
+          .content {
+            .selectCon {
+              .addCon {
+                flex-direction: column;
+                .addBtn {
+                  margin-top: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .wizard5 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+    padding-bottom: 2rem;
+    .patch1 {
+      position: absolute;
+      z-index: -1;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: $patch1-color;
+      opacity: 0.3;
+      bottom: 7%;
+      right: 10%;
+    }
+    .patch2 {
+      position: absolute;
+      z-index: -1;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $btn-color;
+      opacity: 0.3;
+      bottom: 5%;
+      right: 18%;
+    }
+    .patch3 {
+      position: absolute;
+      z-index: -1;
+      width: 25%;
+      height: 20%;
+      border-radius: 2rem;
+      background-color: $patch1-color;
+      transform: rotate(30deg);
+      opacity: 0.3;
+      left: -20%;
+      bottom: 0;
+    }
+    .patch4 {
+      position: absolute;
+      z-index: -1;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background-color: $btn-color;
+      transform: rotate(30deg);
+      opacity: 0.2;
+      right: 5%;
+      top: 40%;
+    }
+    .Con1 {
+      width: 60%;
+      margin-left: 10%;
+      .heading {
+        padding: 1rem 0;
+        font-size: 18px;
+        width: 100%;
+      }
+      .detail {
+        font-size: 15px;
+        color: $heading-color;
+      }
+      .note {
+        border: 1px solid $heading-color;
+        background-color: rgba($color: #c4c4c4, $alpha: 0.4);
+        padding: 1rem 2rem;
+        margin: 1rem;
+      }
+      .con {
+        display: flex;
+        flex-direction: column;
+        .MainHeading {
+          padding: 1rem 0;
+          font-size: 18px;
+          width: 100%;
+        }
+        .detail {
+          margin-bottom: 1rem;
+        }
+        .ImgCon {
+          display: flex;
+          width: 70%;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          label {
+            width: 33%;
+            img {
+              width: 100%;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+      .BtnCon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+    .Con2 {
+      width: 20%;
+      background-color: rgba($color: #c4c4c4, $alpha: 0.4);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 2rem;
+      margin-top: 5%;
+      margin-left: 2rem;
+      border-radius: 5px;
+      .image {
+        margin: 1rem;
+      }
+      .detail {
+        font-size: 13px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    @media (max-width: 600px) {
+      flex-direction: column;
+      .Con1 {
+        width: 90%;
+        margin: 1rem;
+        .con {
+          .ImgCon {
+            width: 90%;
+            img {
+              width: 80%;
+            }
+          }
+        }
+      }
+      .Con2 {
+        width: 90%;
+        margin: 1rem;
+        padding: 2rem 0;
+      }
+    }
+  }
+  .wizard6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    .patch1 {
+      position: absolute;
+      z-index: -1;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: $patch1-color;
+      opacity: 0.3;
+      bottom: 2%;
+      right: 10%;
+    }
+    .patch2 {
+      position: absolute;
+      z-index: -1;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $btn-color;
+      opacity: 0.3;
+      bottom: 0;
+      right: 18%;
+    }
+    .patch3 {
+      position: absolute;
+      z-index: -1;
+      width: 25%;
+      height: 35%;
+      border-radius: 2rem;
+      background-color: $patch1-color;
+      transform: rotate(30deg);
+      opacity: 0.2;
+      left: -20%;
+      top: 5%;
+    }
+    .Con {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 2rem 0;
+      background-color: rgba($color: #ffdc60, $alpha: 0.1);
+      border-radius: 1rem;
+      box-shadow: 4px 4px 4px rgba(182, 182, 182, 0.4);
+      padding: 2rem;
+      width: 40%;
+      .heading {
+        color: $btn-color;
+      }
+      .detail {
+        font-weight: bolder !important;
+        color: $heading-color;
+      }
+      .link {
+        background-color: $base-color;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid gray;
+      }
+      .IconDiv {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 1rem;
+        width: 40%;
+      }
+      .line {
+        width: 100%;
+      }
+      .detail1 {
+        font-size: 13px;
+        color: $heading-color;
+        text-align: center;
+      }
+      .image {
+        width: 90%;
+        margin: 1rem;
+        cursor: pointer;
+        border-radius: 1rem;
+      }
+      .VBtn {
+        padding: 0.5rem 2rem;
+        background-color: $base-color;
+      }
+      @media (max-width: 600px) {
+        width: 60%;
+      }
+      @media (max-width: 450px) {
+        width: 75%;
+        .link {
+          padding: 0.5rem;
+        }
+        .IconDiv {
+          width: 70%;
+        }
+        .image {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
