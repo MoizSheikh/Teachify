@@ -3,7 +3,6 @@ import Button from "@mui/material/Button";
 import { TextField } from "@mui/material";
 import { signupContext } from "./SignupWizardContainer";
 import { useNavigate } from "react-router-dom";
-import { url } from "url.js";
 import axios from "axios";
 
 export default function VerificationWizard() {
@@ -19,22 +18,19 @@ export default function VerificationWizard() {
   };
   const sendVerifyEmailCode = async (e) => {
     e.preventDefault();
-    const result = await axios(url + "/teacher/add/" + email);
-    const response = result.data;
+    const { data } = await axios("http://localhost:5001/teacher/add/" + email);
+    const { _id, email: resEmail, is_email_verified, is_profile_completed } = data;
     if (response.success) {
-      alert(response.message);
       setCredentials({
         ...credentials,
-        _id: response.data._id,
-        email: response.data.email,
+        _id: _id,
+        email: resEmail,
       });
-      if (
-        response.data.is_email_verified &&
-        !response.data.is_profile_completed
-      ) {
+      // Already verified but not completed TODO: FIX THIS LOGIC
+      if (is_email_verified && !is_profile_completed) {
         setTab(0);
         // setShowModal(true);
-      } else if (response.data.is_profile_completed) {
+      } else if (is_profile_completed) {
         navigateToLogin();
       } else {
         setCodeField(true);
@@ -46,13 +42,12 @@ export default function VerificationWizard() {
 
   const VerifyEmailCode = async (e) => {
     e.preventDefault();
-    const result = await axios(url + "/teacher/verifyEmailCode/" + code);
+    const result = await axios("/teacher/verifyEmailCode/" + code);
     const response = result.data;
     if (response.success) {
-      alert(response.message);
       setTab(0);
     } else {
-      alert(response.message);
+      alert(response.message); //TODO: To be replaced with a toast
     }
   };
 
@@ -67,7 +62,7 @@ export default function VerificationWizard() {
           <img
             style={{ width: "100px" }}
             className="Logoimage"
-            src={  "/ItsEasyLogo.png"}
+            src={"/ItsEasyLogo.png"}
             alt="logo"
           />
         </div>
@@ -80,11 +75,6 @@ export default function VerificationWizard() {
             className="email"
             name="email"
             onChange={(e) => setEmail(e.target.value)}
-            inputProps={{
-              style: {
-                padding: 13,
-              },
-            }}
             disabled={codeField}
           />
           <Button
@@ -105,11 +95,6 @@ export default function VerificationWizard() {
                 type="text"
                 name="password"
                 onChange={(e) => setCode(e.target.value)}
-                inputProps={{
-                  style: {
-                    padding: 13,
-                  },
-                }}
               />
               <Button
                 variant="contained"

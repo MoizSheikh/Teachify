@@ -9,7 +9,7 @@ import { TextField } from "@mui/material";
 import { LinearProgress } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { UpdateCurrentUser } from "redux/action/userAction";
+
 import axios from "axios";
 
 const Wizard5 = () => {
@@ -497,7 +497,7 @@ const Wizard5 = () => {
             ...res.data.data,
           },
         };
-        dispatch(UpdateCurrentUser(_data));
+        // dispatch(UpdateCurrentUser(_data));
       });
       navigateToLogin();
     }

@@ -14,6 +14,7 @@ router.get("/add/:email", async (req, res) => {
     const html = "<h1>Your verification code is :" + code + "</h1>";
 
     const isUserSaved = await Student.findOne({ email: email });
+    console.log('isUserSaved: ', isUserSaved);
     if (isUserSaved) {
       if (isUserSaved.is_email_verified && !isUserSaved.is_profile_completed) {
         return res.status(200).json({

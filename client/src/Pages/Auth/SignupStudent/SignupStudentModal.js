@@ -1,6 +1,6 @@
 /* eslint-disable default-case */
 import React, { useState, useEffect } from "react";
-import { withStyles } from "@material-ui/core/styles";
+// import { withStyles } from "@material-ui/core/styles";
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
@@ -9,39 +9,39 @@ import Tab from "@mui/material/Tab";
 import Wizard1 from "./Wizard1";
 import Wizard2 from "./Wizard2";
 
-const CustomTab = withStyles({
-  root: {
-    // border: "1px solid grey",
-    borderRadius: "5px",
-    margin: "1rem 0.4rem",
-    background: "#E5E5E5",
-    "&:hover": {
-      backgroundColor: "#5956E9",
-      color: "white !important",
-      borderRadius: "5px",
-      cursor: "pointer",
-      border: "none",
-    },
-  },
-  selected: {
-    backgroundColor: "#5956E9",
-    color: "white !important",
-    transition: "transform .2s" /* Animation */,
-    borderRadius: "5px",
-    padding: "0",
-    border: "none",
-    fontWeight: "bold",
-  },
-})(Tab);
+// const CustomTab = withStyles({
+//   root: {
+//     // border: "1px solid grey",
+//     borderRadius: "5px",
+//     margin: "1rem 0.4rem",
+//     background: "#E5E5E5",
+//     "&:hover": {
+//       backgroundColor: "#5956E9",
+//       color: "white !important",
+//       borderRadius: "5px",
+//       cursor: "pointer",
+//       border: "none",
+//     },
+//   },
+//   selected: {
+//     backgroundColor: "#5956E9",
+//     color: "white !important",
+//     transition: "transform .2s" /* Animation */,
+//     borderRadius: "5px",
+//     padding: "0",
+//     border: "none",
+//     fontWeight: "bold",
+//   },
+// })(Tab);
 
-const CustomDialog = withStyles({
-  paper: {
-    borderRadius: "45px",
-    padding: "1rem 2rem",
-    width: "70vw !important",
-    minWidth: "70vw !important",
-  },
-})(Dialog);
+// const CustomDialog = withStyles({
+//   paper: {
+//     borderRadius: "45px",
+//     padding: "1rem 2rem",
+//     width: "70vw !important",
+//     minWidth: "70vw !important",
+//   },
+// })(Dialog);
 
 export const completeProfileContext = React.createContext();
 
@@ -118,8 +118,8 @@ const SignupStudentModal = ({ showModal, _credentials }) => {
               scrollButtons="auto"
               allowScrollButtonsMobile
             >
-              <CustomTab label="Profile" />
-              <CustomTab label="Study" />
+              {/* <CustomTab label="Profile" />
+              <CustomTab label="Study" /> */}
             </Tabs>
           )}
           <completeProfileContext.Provider value={completeProfileContextValue}>

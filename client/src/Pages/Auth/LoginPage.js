@@ -1,20 +1,18 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
 import { TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setCurrentUser } from "./../../redux/action/userAction";
-import { url } from "../../url";
-const axios = require("axios");
+// import { loginUser } from "../../redux/slices/UserSlice"
 
 function LoginPage(props) {
-  const dispatch = useDispatch();
-  //credentials object will get the input data user type on form in frontend
+  // const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
   });
-  //state update here when something changed
+
   const onChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
@@ -26,29 +24,20 @@ function LoginPage(props) {
   }, [credentials]);
 
   const handleLogin = () => {
-    isStudent
-      ? axios.post("/student/login", credentials).then((data) => {
-          console.log(data.data);
-          const response = data.data;
-          alert(response.message);
-
-          if (response.success) {
-            dispatch(setCurrentUser({ ...response, role: "student" }));
-            navigate("/studentdashboard");
-          }
-        })
-      : axios.post("/teacher/login", credentials).then((data) => {
-          console.log(data.data);
-          const response = data.data;
-          alert(response.message);
-
-          if (response.success) {
-            dispatch(setCurrentUser({ ...response, role: "teacher" }));
-            navigate("/teacherdashboard");
-          }
-        });
+  //   const loginThunk = isStudent ? loginUser : loginTeache;
+  //   dispatch(loginThunk(credentials))
+  //     .unwrap()
+  //     .then((response) => {
+  //       alert(response.message);
+  //       if (response.success) {
+  //         const role = isStudent ? "student" : "teacher";
+  //         navigate(isStudent ? "/studentdashboard" : "/teacherdashboard");
+  //       }
+  //     })
+  //     .catch((err) => {
+  //       alert(err);
+  //     });
   };
-  const navigate = useNavigate();
   const navigateToSignUp = () => {
     navigate("/signup");
   };
@@ -93,11 +82,6 @@ function LoginPage(props) {
             className="email"
             name="email"
             onChange={onChange}
-            inputProps={{
-              style: {
-                padding: 10,
-              },
-            }}
           />
           <TextField
             variant="outlined"
@@ -106,11 +90,6 @@ function LoginPage(props) {
             type="password"
             onChange={onChange}
             name="password"
-            inputProps={{
-              style: {
-                padding: 10,
-              },
-            }}
           />
           <Button variant="contained" className="btn1" onClick={handleLogin}>
             SignIn

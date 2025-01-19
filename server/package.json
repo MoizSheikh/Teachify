@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "client": "cd client && npm start",
-    "server": "node-env-run server --exec nodemon | pino-colada",
-    "dev": "run-p server ",
+    "server": "PORT=5001 node-env-run server.js --exec nodemon | pino-colada",
+    "dev": "run-p server",
     "seed": "node seeds/seed.js"
   },
   "author": "",

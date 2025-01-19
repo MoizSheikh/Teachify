@@ -34,15 +34,12 @@ const initialData = {
 
 function SignupPage(props) {
   const userDetails = useSelector(({ user }) => user?.userDetails);
-  console.log(userDetails?.userData);
-
-  const _initialData = {
+  const [credentials, setCredentials] = useState({
     ...initialData,
     ...userDetails?.userData,
-  };
-
-  const [credentials, setCredentials] = useState(_initialData);
+  });
   const [tab, setTab] = useState(1);
+
 
   const handleCreds = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });

@@ -1,9 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { GoPrimitiveDot } from "react-icons/go";
+import { GoDotFill } from "react-icons/go";
 import { BiEnvelope } from "react-icons/bi";
 
 const WizardJoinNow = () => {
+  console.log("inside")
   const navigate = useNavigate();
   const navigateToSignUpStudent = () => {
     navigate("/signupstudent");
@@ -30,13 +31,13 @@ const WizardJoinNow = () => {
         <div className="Part1">
           <h3>Support every student with tailored lesson to succeed. </h3>
           <div className="detail">
-            <GoPrimitiveDot /> Find material that is standards-aligned
+            <GoDotFill /> Find material that is standards-aligned
           </div>
           <div className="detail">
-            <GoPrimitiveDot /> Track progress for students
+            <GoDotFill /> Track progress for students
           </div>
           <div className="detail">
-            <GoPrimitiveDot /> Join hundreds of students and teachers
+            <GoDotFill /> Join hundreds of students and teachers
           </div>
           <div className="detail">
             By signing up for teachify, you agree to our

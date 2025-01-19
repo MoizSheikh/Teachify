@@ -7,12 +7,12 @@ const mongoose = require("mongoose");
 const Pusher = require("pusher");
 
 // create a new Pusher instance
-const pusherConfig = {
-  appId: import.meta.env.VITE_PUSHER_APP_ID,
-  key: import.meta.env.VITE_PUSHER_APP_KEY,
-  secret: import.meta.env.VITE_PUSHER_APP_SECRET,
-  cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER,
-};
+// const pusherConfig = {
+//   appId: import.meta.env.VITE_PUSHER_APP_ID,
+//   key: import.meta.env.VITE_PUSHER_APP_KEY,
+//   secret: import.meta.env.VITE_PUSHER_APP_SECRET,
+//   cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER,
+// };
 
 router.post("/addchat", async (req, res) => {
   const newChat = new Chat(req.body);

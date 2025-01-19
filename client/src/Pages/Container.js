@@ -4,11 +4,12 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Homepage from "./Shared/Homepage";
 // import MainDashboard from "./Teacher/Dashboard/MainDashboard";
 // import MainDashboardStudent from "./Student/Dashboard/MainDashboardStudent";
-// import SignupTeacher from "./Auth/SignupTeacher/SignupWizardContainer";
-// import StudentSignupContainer from "./Auth/SignupStudent/StudentSignupContainer";
+import SignupTeacher from "./Auth/SignupTeacher/SignupWizardContainer";
+import StudentSignupContainer from "./Auth/SignupStudent/StudentSignupContainer";
 
 // import LoginPage from "./Auth/LoginPage";
-// import SignupPage from "./Auth/SignupTeacher/WizardJoinNow";
+import SignupPage from "./Auth/SignupTeacher/WizardJoinNow";
+import LoginPage from "./Auth/LoginPage";
 // import TeacherClasses from "./Teacher/ViewClass/TeacherClasses";
 // import CreateClassContainer from "./Class/CreateClass/CreateClassContainer";
 // import ClassView from "./Class/ViewClass/ClassView";
@@ -31,10 +32,11 @@ const Container = (props) => {
         {/* All */}
         <Route path="/" element={<Homepage />} />
         {/* <Route path="/home" element={<Homepage />} /> */}
-        {/* <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
-        <Route path="/signupstudent" element={<StudentSignupContainer />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/signupteacher" element={<SignupTeacher />} />
+        <Route path="/signupstudent" element={<StudentSignupContainer />} />
+        {/*
 
         <Route
           path="/teacherdashboard"

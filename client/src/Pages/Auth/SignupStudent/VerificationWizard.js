@@ -3,9 +3,9 @@ import Button from "@mui/material/Button";
 import { TextField } from "@mui/material";
 import { signupContext } from "./StudentSignupContainer";
 import { useNavigate } from "react-router-dom";
-import { url } from "url.js";
 import axios from "axios";
 import SignupStudentModal from "./SignupStudentModal";
+import { url } from "url";
 
 export default function VerificationWizard() {
   const { credentials, setCredentials } = useContext(signupContext);

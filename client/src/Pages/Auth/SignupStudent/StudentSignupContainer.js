@@ -6,7 +6,7 @@ import VerificationWizard from "./VerificationWizard";
 import SignupStudentModal from "./SignupStudentModal";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setCurrentUser } from "redux/action/userAction";
+
 import axios from "axios";
 
 export const signupContext = React.createContext();
@@ -60,7 +60,7 @@ function StudentSignupContainer(props) {
               ...res,
             },
           };
-          dispatch(setCurrentUser(_data));
+
           navigateToStudentDashboard();
         });
       }
