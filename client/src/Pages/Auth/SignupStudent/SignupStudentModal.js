@@ -1,6 +1,4 @@
-/* eslint-disable default-case */
 import React, { useState, useEffect } from "react";
-// import { withStyles } from "@material-ui/core/styles";
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
@@ -9,41 +7,7 @@ import Tab from "@mui/material/Tab";
 import Wizard1 from "./Wizard1";
 import Wizard2 from "./Wizard2";
 
-// const CustomTab = withStyles({
-//   root: {
-//     // border: "1px solid grey",
-//     borderRadius: "5px",
-//     margin: "1rem 0.4rem",
-//     background: "#E5E5E5",
-//     "&:hover": {
-//       backgroundColor: "#5956E9",
-//       color: "white !important",
-//       borderRadius: "5px",
-//       cursor: "pointer",
-//       border: "none",
-//     },
-//   },
-//   selected: {
-//     backgroundColor: "#5956E9",
-//     color: "white !important",
-//     transition: "transform .2s" /* Animation */,
-//     borderRadius: "5px",
-//     padding: "0",
-//     border: "none",
-//     fontWeight: "bold",
-//   },
-// })(Tab);
-
-// const CustomDialog = withStyles({
-//   paper: {
-//     borderRadius: "45px",
-//     padding: "1rem 2rem",
-//     width: "70vw !important",
-//     minWidth: "70vw !important",
-//   },
-// })(Dialog);
-
-export const completeProfileContext = React.createContext();
+export const CompleteProfileContext = React.createContext();
 
 const SignupStudentModal = ({ showModal, _credentials }) => {
   const [open, setOpen] = useState(showModal);
@@ -58,46 +22,55 @@ const SignupStudentModal = ({ showModal, _credentials }) => {
     setCredentials(_credentials);
   }, [_credentials]);
 
-  const handleCreds = (e) => {
-    setCredentials({ ...credentials, [e.target.name]: e.target.value });
+  const handleCredentialsChange = (e) => {
+    const { name, value } = e.target;
+    setCredentials(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleDob = (name, value) => {
-    setCredentials({ ...credentials, [name]: value });
+  const handleDateOfBirthChange = (name, value) => {
+    setCredentials(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleChangeTab = (event, newValue) => {
-    setTab(newValue);
-  };
-
-  const completeProfileContextValue = {
+  const contextValue = {
     tab,
     setTab,
-    handleCreds,
-    handleDob,
+    handleCreds: handleCredentialsChange,
+    handleDob: handleDateOfBirthChange,
     credentials,
     setCredentials,
   };
-  const completeProfileContent = (tab) => {
+
+  const renderWizard = () => {
     switch (tab) {
       case 0:
         return <Wizard1 />;
       case 1:
         return <Wizard2 />;
+      default:
+        return null;
     }
   };
 
+  const isTabThree = tab === 3;
+
   return (
-    <CustomDialog
-      // fullScreen={fullScreen}
+    <Dialog
       open={open}
-      aria-labelledby="responsive-dialog-title"
+      aria-labelledby="signup-dialog-title"
       className="signupStudentModal"
+      sx={{
+        "& .MuiDialog-paper": {
+          borderRadius: "45px",
+          padding: "1rem 2rem",
+          width: "70vw",
+          minWidth: "70vw",
+        }
+      }}
     >
-      {tab === 3 ? null : (
+      {!isTabThree && (
         <DialogTitle
-          id="responsive-dialog-title"
-          style={{
+          id="signup-dialog-title"
+          sx={{
             padding: "0.5rem",
             margin: 0,
             textAlign: "center",
@@ -107,27 +80,41 @@ const SignupStudentModal = ({ showModal, _credentials }) => {
           Create your Profile
         </DialogTitle>
       )}
-      <DialogContent style={{ padding: "0 1rem" }}>
-        <>
-          {tab === 3 ? null : (
-            <Tabs
-              value={tab}
-              onChange={handleChangeTab}
-              aria-label="disabled tabs example"
-              variant="scrollable"
-              scrollButtons="auto"
-              allowScrollButtonsMobile
-            >
-              {/* <CustomTab label="Profile" />
-              <CustomTab label="Study" /> */}
-            </Tabs>
-          )}
-          <completeProfileContext.Provider value={completeProfileContextValue}>
-            {completeProfileContent(tab)}
-          </completeProfileContext.Provider>
-        </>
+      <DialogContent sx={{ padding: "0 1rem" }}>
+        {!isTabThree && (
+          <Tabs
+            value={tab}
+            onChange={(_, newValue) => setTab(newValue)}
+            aria-label="signup wizard tabs"
+            variant="scrollable"
+            scrollButtons="auto"
+            allowScrollButtonsMobile
+            sx={{
+              "& .MuiTab-root": {
+                borderRadius: "5px",
+                margin: "1rem 0.4rem",
+                background: "#E5E5E5",
+                "&:hover": {
+                  backgroundColor: "#5956E9",
+                  color: "white",
+                  cursor: "pointer",
+                  border: "none",
+                },
+                "&.Mui-selected": {
+                  backgroundColor: "#5956E9",
+                  color: "white",
+                  fontWeight: "bold",
+                  border: "none",
+                }
+              }
+            }}
+          />
+        )}
+        <CompleteProfileContext.Provider value={contextValue}>
+          {renderWizard()}
+        </CompleteProfileContext.Provider>
       </DialogContent>
-    </CustomDialog>
+    </Dialog>
   );
 };
 
